@@ -1,0 +1,11 @@
+{
+  "name": "keanulee.com",
+  "private": true,
+  "dependencies": {
+    "app-layout": "2",
+    "iron-ajax": "2",
+    "iron-location": "2",
+    "polymer": "2",
+    "iron-pages": "2"
+  }
+}

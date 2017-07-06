@@ -1,0 +1,148 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-location/iron-location.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/effects/waterfall.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+
+<link rel="import" href="homepage-content.html">
+<link rel="import" href="schedule-grid.html">
+<link rel="import" href="speakers-grid.html">
+
+<dom-module id="kl-shell">
+  <template>
+    <style>
+      :host {
+        display: block;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      #mainSlotContainer {
+        transition-property: transform, opacity;
+        transition-duration: 0.5s;
+        will-change: transform;
+      }
+
+      #mainSlotContainer.loading {
+        transform: translate3d(0, 50vh, 0);
+        opacity: 0;
+      }
+    </style>
+
+    <iron-location path="{{path}}"></iron-location>
+
+    <slot name="header"></slot>
+
+    <div id="mainSlotContainer" on-transitionend="_transitionend">
+      <slot></slot>
+    </div>
+
+    <slot name="drawer"></slot>
+  </template>
+
+  <script>
+
+    class KLShellElement extends Polymer.Element {
+
+      static get is() { return 'kl-shell' }
+
+      static get properties() {
+        return {
+          path: {
+            type: String,
+            observer: '_pathChanged'
+          }
+        }
+      }
+
+      static get observers() {
+        return [
+          '_importShellContent(_shellContent, _playingExitTransition)'
+        ];
+      }
+
+      _pathChanged(path, oldPath) {
+        if (oldPath) {
+          this._fetchDoc(path);
+          this._closeDrawer();
+          this._playExitTransition(path);
+        }
+      }
+
+      _fetchDoc(path) {
+        this._shellContent = null;
+        const xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', this._handleResponse.bind(this));
+        xhr.addEventListener('error', this._handleNetworkError.bind(this));
+        xhr.open('GET', path);
+        xhr.responseType = 'document';
+        xhr.send();
+      }
+
+      _handleResponse(event) {
+        const doc = event.target.response;
+        document.title = doc.title;
+        const shell = doc ? doc.querySelector('kl-shell') : null;
+        this._shellContent = shell ? this._getContentFrag(shell) : this._createFragFromText('Page Format Error');
+      }
+
+      _handleNetworkError(event) {
+        this._shellContent = this._createFragFromText('Network Error');
+      }
+
+      _getContentFrag(shell) {
+        const frag = document.createDocumentFragment();
+        for (let i = 0; i < shell.childNodes.length; ++i) {
+          frag.appendChild(document.importNode(shell.childNodes[i], true));
+        }
+        return frag;
+      }
+
+      _createFragFromText(text) {
+        const frag = document.createDocumentFragment();
+        frag.appendChild(document.createTextNode(text));
+        return frag;
+      }
+
+      _importShellContent(frag, playingExitTransition) {
+        if (frag && !playingExitTransition) {
+          while (this.firstChild) {
+            this.removeChild(this.firstChild);
+          }
+          Polymer.AppLayout.scroll();
+          this.appendChild(frag);
+          this._playEnterTransition();
+        }
+      }
+
+      _closeDrawer() {
+        const drawer = this.querySelector('app-drawer');
+        drawer && drawer.close();
+      }
+
+      _playExitTransition(path) {
+        this._playingExitTransition = true;
+        this.$.mainSlotContainer.classList.add('loading');
+      }
+
+      _transitionend(event) {
+        const target = event.target;
+        if (target === this || target === this.$.mainSlotContainer) {
+          if (this._playingExitTransition) {
+            this._playingExitTransition = false;
+          }
+        }
+      }
+
+      _playEnterTransition() {
+        requestAnimationFrame(() => {
+          this.$.mainSlotContainer.classList.remove('loading');
+        });
+      }
+
+    }
+
+    customElements.define(KLShellElement.is, KLShellElement);
+
+  </script>
+</dom-module>

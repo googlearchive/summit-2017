@@ -1,0 +1,39 @@
+{
+  "hosting": {
+    "public": "build/default",
+    "rewrites": [
+      {
+        "source": "/schedule",
+        "destination": "/index.html"
+      },
+      {
+        "source": "/speakers",
+        "destination": "/index.html"
+      }
+    ],
+    "trailingSlash": false,
+    "headers": [
+      {
+        "source": "/",
+        "headers": [{
+          "key": "Link",
+          "value": "</elements/polymer-summit.html>;rel=preload;as=document,</data/homepage.html>;rel=preload;as=document"
+          }]
+      },
+      {
+        "source": "/schedule",
+        "headers": [{
+          "key": "Link",
+          "value": "</elements/polymer-summit.html>;rel=preload;as=document,</data/schedule.json>;rel=preload"
+          }]
+      },
+      {
+        "source": "/speakers",
+        "headers": [{
+          "key": "Link",
+          "value": "</elements/polymer-summit.html>;rel=preload;as=document,</data/speakers.json>;rel=preload"
+          }]
+      }
+    ]
+  }
+}

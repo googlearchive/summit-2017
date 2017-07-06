@@ -1,0 +1,105 @@
+<!--
+@license
+Copyright (c) 2017 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<!doctype html>
+<html lang="en" itemscope="" itemtype="http://schema.org/Event">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Two days of sessions and codelabs on all things Polymer and Web Components - building great components and apps, scaling within an organization, and more.">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
+  <title>Polymer Summit 2016</title>
+  <link rel="shortcut icon" href="/images/logo-32.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Polymer Summit 2016">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Polymer Summit 2016">
+  <meta itemprop="name" content="Polymer Summit 2016">
+  <meta itemprop="description" content="Two days of sessions and codelabs on all things Polymer and Web Components - building great components and apps, scaling within an organization, and more.">
+  <meta itemprop="image" content="https://www.polymer-project.org/summit/images/badge-2016.png">
+  <meta itemprop="startDate" content="2016-10-17T00:00:00Z">
+  <meta itemprop="endDate" content="2016-10-18T23:59:59Z">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@Polymer">
+  <meta name="twitter:title" content="Polymer Summit 2016">
+  <meta name="twitter:description" content="Two days of sessions and codelabs on all things Polymer and Web Components - building great components and apps, scaling within an organization, and more.">
+  <meta name="twitter:image" content="https://www.polymer-project.org/summit/images/badge-2016-banner.png">
+  <meta name="twitter:image:alt" content="Polymer Summit 2016 logo">
+  <meta property="og:title" content="Polymer Summit 2016">
+  <meta property="og:site_name" content="Polymer Summit 2016">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Two days of sessions and codelabs on all things Polymer and Web Components - building great components and apps, scaling within an organization, and more.">
+  <meta property="og:image" content="https://www.polymer-project.org/summit/images/badge-2016-banner.png">
+  <meta name="theme-color" content="#1e88e5">
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="import" href="/elements/polymer-summit.html">
+
+  <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Roboto, sans-serif;
+      background: #f2f2f2;
+      color: #000;
+      font-size: 22px;
+      line-height: 25px;
+      letter-spacing: -.01em;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent
+    }
+  </style>
+</head>
+
+<body>
+  <polymer-summit></polymer-summit>
+
+  <script>
+    // Register service worker, if supported, after the load event (to deprioritize it after lazy imports).
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+          registration.onupdatefound = function() {
+            // The updatefound event implies that registration.installing is set; see
+            // https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#service-worker-container-updatefound-event
+            const installingWorker = registration.installing;
+            installingWorker.onstatechange = function() {
+              switch (installingWorker.state) {
+                case 'installed':
+                  if (!navigator.serviceWorker.controller) {
+                    // window.showToast('Service Worker installed! Pages you view are cached for offline use.');
+                  }
+                  break;
+
+                case 'redundant':
+                  throw Error('The installing service worker became redundant.');
+              }
+            };
+          };
+        }).catch(function(e) {
+          console.error('Service worker registration failed:', e);
+        });
+
+        // Check to see if the service worker controlling the page at initial load
+        // has become redundant, since this implies there's a new service worker with fresh content.
+        if (navigator.serviceWorker.controller) {
+          navigator.serviceWorker.controller.onstatechange = function(event) {
+            if (event.target.state === 'redundant') {
+              // window.showToast('Site updated. Refresh this page to see the latest content.');
+            }
+          };
+        }
+      });
+    }
+  </script>
+</body>
+</html>

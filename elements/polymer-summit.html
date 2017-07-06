@@ -1,0 +1,207 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-location/iron-location.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/effects/waterfall.html">
+<link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+
+<!-- <link rel="import" href="fancy-pages.html"> -->
+<link rel="import" href="homepage-content.html">
+<link rel="import" href="schedule-grid.html">
+<link rel="import" href="speakers-grid.html">
+
+<dom-module id="polymer-summit">
+  <template>
+    <style include="iron-flex iron-flex-alignment">
+      :host {
+        display: block;
+        min-height: 100vh;
+        overflow: hidden;
+  
+        --header-height: 60px;
+      }
+
+      nav a {
+        margin: 10px;
+        padding: 10px;
+        color: #000;
+        text-decoration: none;
+      }
+
+      app-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+      }
+
+      app-header nav {
+        background: #FFF;
+        height: var(--header-height);
+      }
+
+      app-header.transparent nav {
+        background: none;
+        text-shadow: 0 0 2px #FFF;
+      }
+
+      app-header nav a {
+        display: inline-block;
+      }
+
+      .mobile-header-nav a {
+        margin: 8px;
+        height: 24px;
+      }
+
+      .mobile-header-nav a svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .desktop-header-nav {
+        display: none;
+      }
+
+      app-drawer {
+        position: fixed;
+        z-index: 20;
+      }
+
+      app-drawer:not([opened]) {
+        visibility: hidden;
+      }
+
+      app-drawer nav {
+        margin-top: 40px;
+      }
+
+      app-drawer nav a {
+        display: block;
+        border-left: 2px solid transparent;
+      }
+
+      app-drawer nav a.selected {
+        border-left: 2px solid #000;
+      }
+
+      iron-pages {
+        margin-top: var(--header-height);
+      }
+
+      @media (min-width: 801px) {
+        .mobile-header-nav {
+          display: none;
+        }
+
+        .desktop-header-nav {
+          display: block;
+          text-align: right;
+        }
+
+        .desktop-header-nav button {
+          background: none;
+          border: none;
+        }
+
+        .desktop-header-nav a:hover {
+          border-bottom: 2px solid #CCC;
+        }
+
+        .desktop-header-nav a.selected {
+          border-bottom: 2px solid #000;
+        }
+      }
+
+      @keyframes show-fancy-page {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        51% {
+          transform: translate3d(0, 50vh, 0);
+          position: static;
+          opacity: 0;
+        }
+        to {
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes hide-fancy-page {
+        0% {
+          transform: translate3d(0, 0, 0);
+          opacity: 1;
+        }
+        50% {
+          transform: translate3d(0, 50vh, 0);
+          opacity: 0;
+        }
+        51% {
+          position: absolute;
+        }
+      }
+    </style>
+
+    <iron-location path="{{path}}"></iron-location>
+
+    <app-header slot="header" reveals effects="waterfall">
+      <nav class="mobile-header-nav">
+        <a href="#" onclick="openDrawer()">
+          <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </a>
+      </nav>
+      <nav class="desktop-header-nav">
+        <a href="/" class="selected">Home</a>
+        <a href="/schedule">Schedule</a>
+        <a href="/speakers">Speakers</a>
+        <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank">Codelabs</a>
+      </nav>
+    </app-header>
+
+    <app-drawer slot="drawer" swipe-open no-focus-trap>
+      <nav>
+        <a href="/" class="selected">Home</a>
+        <a href="/schedule">Schedule</a>
+        <a href="/speakers">Speakers</a>
+        <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank">Codelabs</a>
+      </nav>
+    </app-drawer>
+
+    <iron-pages selected="[[path]]" attr-for-selected="path">
+      <homepage-content path="/"></homepage-content>
+      <schedule-grid path="/schedule"></schedule-grid>
+      <speakers-grid path="/speakers"></speakers-grid>
+    </iron-pages>
+
+    <footer>
+      <div class="footer-inner responsive horizontal center layout">
+        <a class="horizontal center layout" target="_blank" href="https://www.polymer-project.org">
+          <div class="logo"></div>
+          <div class="title">Polymer</div>
+        </a>
+        <div class="flex"></div><a target="_blank" href="http://polymer.github.io/LICENSE.txt" data-outbound="license-txt">&copy; 2016 Polymer Authors</a>
+        <div class="dot-separator wide-only"></div><a target="_blank" href="https://www.polymer-project.org" data-outbound="about-polymer">About Polymer</a>
+        <div class="dot-separator wide-only"></div><a target="_blank" href="/summit/code-of-conduct.html" data-outbound="code-of-conduct">Code of Conduct</a>
+      </div>
+    </footer>
+
+  </template>
+
+  <script>
+
+    class PolymerSummitElement extends Polymer.Element {
+
+      static get is() { return 'polymer-summit' }
+
+    }
+
+    customElements.define(PolymerSummitElement.is, PolymerSummitElement);
+
+  </script>
+</dom-module>

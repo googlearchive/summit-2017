@@ -1,0 +1,15 @@
+{
+  "shell": "elements/polymer-summit.html",
+  "sources": [
+    "data/**/*",
+    "images/**/*",
+    "manifest.json"
+  ],
+  "builds": [{
+    "bundle": true,
+    "js": {"minify": true},
+    "css": {"minify": true},
+    "html": {"minify": true},
+    "addServiceWorker": true
+  }]
+}

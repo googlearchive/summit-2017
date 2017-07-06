@@ -1,0 +1,38 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="homepage-content">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <iron-ajax auto url="/data/homepage.html" handle-as="document" on-response="_handleResponse"></iron-ajax>
+
+    <slot></slot>
+  </template>
+
+  <script>
+
+    class HomepageContentElement extends Polymer.Element {
+
+      static get is() { return 'homepage-content' }
+
+      _handleResponse(event) {
+        const doc = event.detail.response;
+        const frag = document.createDocumentFragment();
+        while (doc.body.firstChild) {
+          frag.appendChild(doc.body.firstChild);
+        }
+
+        this.appendChild(document.importNode(frag, true));
+      }
+
+    }
+
+    customElements.define(HomepageContentElement.is, HomepageContentElement);
+
+  </script>
+</dom-module>

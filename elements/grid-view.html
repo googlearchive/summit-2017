@@ -1,0 +1,73 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="grid-view">
+  <template>
+    <style>
+      :host {
+        display: block;
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        max-width: 1264px;
+        margin: 0 auto;
+        padding: 8px;
+      }
+
+      :host > ::slotted(*) {
+        @apply(--layout-flex-none);
+        width: 300px;
+        margin: 8px;
+        box-sizing: border-box;
+      }
+
+      @media (max-width: 1299px) {
+        :host {
+          max-width: 948px;
+        }
+      }
+
+      @media (max-width: 983px) {
+        :host {
+          max-width: 632px;
+        }
+      }
+
+      @media (max-width: 667px) {
+        :host {
+          max-width: 616px;
+          padding: 4px;
+        }
+
+        :host > ::slotted(*) {
+          margin: 4px;
+        }
+      }
+
+      @media (max-width: 643px) {
+        :host {
+          max-width: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        :host > ::slotted(*) {
+          width: 100%;
+          margin: 0;
+        }
+      }
+    </style>
+
+    <slot></slot>
+  </template>
+
+  <script>
+
+    class GridViewElement extends Polymer.Element {
+
+      static get is() { return 'grid-view' }
+
+    }
+
+    customElements.define(GridViewElement.is, GridViewElement);
+
+  </script>
+</dom-module>
