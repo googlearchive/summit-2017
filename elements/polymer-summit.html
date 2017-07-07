@@ -1,15 +1,11 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/iron-location/iron-location.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
-<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../bower_components/app-layout/app-scroll-effects/effects/waterfall.html">
 <link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
 
-<!-- <link rel="import" href="fancy-pages.html"> -->
-<link rel="import" href="homepage-content.html">
-<link rel="import" href="schedule-grid.html">
-<link rel="import" href="speakers-grid.html">
+<link rel="import" href="fancy-pages.html">
 
 <dom-module id="polymer-summit">
   <template>
@@ -83,11 +79,16 @@
         border-left: 2px solid transparent;
       }
 
-      app-drawer nav a.selected {
+      :host([path="/"]) app-drawer nav a[href="/"],
+      :host([path="/schedule"]) app-drawer nav a[href="/schedule"],
+      :host([path="/speakers"]) app-drawer nav a[href="/speakers"] {
         border-left: 2px solid #000;
       }
 
-      iron-pages {
+      fancy-pages {
+        display: block;
+        min-height: 100vh;
+        overflow: hidden;
         margin-top: var(--header-height);
       }
 
@@ -110,74 +111,44 @@
           border-bottom: 2px solid #CCC;
         }
 
-        .desktop-header-nav a.selected {
+        :host([path="/"]) .desktop-header-nav a[href="/"],
+        :host([path="/schedule"]) .desktop-header-nav a[href="/schedule"],
+        :host([path="/speakers"]) .desktop-header-nav a[href="/speakers"] {
           border-bottom: 2px solid #000;
-        }
-      }
-
-      @keyframes show-fancy-page {
-        0% {
-          opacity: 0;
-        }
-        50% {
-          opacity: 0;
-        }
-        51% {
-          transform: translate3d(0, 50vh, 0);
-          position: static;
-          opacity: 0;
-        }
-        to {
-          transform: translate3d(0, 0, 0);
-          opacity: 1;
-        }
-      }
-
-      @keyframes hide-fancy-page {
-        0% {
-          transform: translate3d(0, 0, 0);
-          opacity: 1;
-        }
-        50% {
-          transform: translate3d(0, 50vh, 0);
-          opacity: 0;
-        }
-        51% {
-          position: absolute;
         }
       }
     </style>
 
     <iron-location path="{{path}}"></iron-location>
 
-    <app-header slot="header" reveals effects="waterfall">
+    <app-header reveals effects="waterfall">
       <nav class="mobile-header-nav">
-        <a href="#" onclick="openDrawer()">
+        <a href="#" on-click="_openDrawer">
           <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </a>
       </nav>
       <nav class="desktop-header-nav">
-        <a href="/" class="selected">Home</a>
+        <a href="/">Home</a>
         <a href="/schedule">Schedule</a>
         <a href="/speakers">Speakers</a>
         <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank">Codelabs</a>
       </nav>
     </app-header>
 
-    <app-drawer slot="drawer" swipe-open no-focus-trap>
+    <app-drawer id="drawer" swipe-open no-focus-trap>
       <nav>
-        <a href="/" class="selected">Home</a>
+        <a href="/">Home</a>
         <a href="/schedule">Schedule</a>
         <a href="/speakers">Speakers</a>
         <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank">Codelabs</a>
       </nav>
     </app-drawer>
 
-    <iron-pages selected="[[path]]" attr-for-selected="path">
+    <fancy-pages path="[[path]]">
       <homepage-content path="/"></homepage-content>
       <schedule-grid path="/schedule"></schedule-grid>
       <speakers-grid path="/speakers"></speakers-grid>
-    </iron-pages>
+    </fancy-pages>
 
     <footer>
       <div class="footer-inner responsive horizontal center layout">
@@ -199,6 +170,23 @@
 
       static get is() { return 'polymer-summit' }
 
+      static get properties() {
+        return {
+          path: {
+            type: String,
+            observer: '_pathChanged',
+            reflectToAttribute: true
+          }
+        }
+      }
+
+      _pathChanged() {
+        this.$.drawer.close();
+      }
+
+      _openDrawer() {
+        this.$.drawer.open();
+      }
     }
 
     customElements.define(PolymerSummitElement.is, PolymerSummitElement);
