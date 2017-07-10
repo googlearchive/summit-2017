@@ -2,7 +2,7 @@
   "name": "polymer-summit-2017",
   "private": true,
   "dependencies": {
-    "app-layout": "2",
+    "app-layout": "class",
     "polymer": "2"
   }
 }
