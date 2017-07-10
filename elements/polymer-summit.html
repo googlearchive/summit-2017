@@ -179,19 +179,20 @@
 
       ready() {
         super.ready();
-        this.addEventListener('click', (ev) => {
-          if (ev.button !== 0 || ev.metaKey || ev.ctrlKey) {
+        this.addEventListener('click', (event) => {
+          if (event.button !== 0 || event.metaKey || event.ctrlKey) {
             return;
           }
 
-          for (let i = 0; i < ev.path.length; ++i) {
-            const el = ev.path[i];
+          const eventPath = event.composedPath();
+          for (let i = 0; i < eventPath.length; ++i) {
+            const el = eventPath[i];
             if (el === this) {
               return;
             }
 
             if (el.tagName === 'A' && el.href.indexOf(window.location.origin) === 0 && !el.target) {
-              ev.preventDefault();
+              event.preventDefault();
               window.history.pushState(null, '', el.href);
               this._setPath(window.location.pathname);
               return;
