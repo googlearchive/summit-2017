@@ -1,5 +1,4 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 
 <link rel="import" href="grid-view.html">
 <link rel="import" href="collapsible-card.html">
@@ -138,7 +137,7 @@
     </style>
 
     <grid-view>
-      <dom-repeat items="[[schedule]]">
+      <dom-repeat items="[[data]]">
         <template>
 
           <div class="date-card">
@@ -173,8 +172,6 @@
         </template>
       </dom-repeat>
     </grid-view>
-
-    <iron-ajax auto="" url="/data/schedule.json" last-response="{{schedule}}"></iron-ajax>
   </template>
 
   <script>
@@ -182,6 +179,18 @@
     class ScheduleGridElement extends Polymer.Element {
 
       static get is() { return 'schedule-grid' }
+
+      ready() {
+        super.ready();
+
+        const xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', () => {
+          this.data = xhr.response;
+        });
+        xhr.open('GET', '/data/schedule.json');
+        xhr.responseType = 'json';
+        xhr.send();
+      }
 
     }
 

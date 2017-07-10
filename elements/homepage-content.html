@@ -1,38 +1,30 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 
-<dom-module id="homepage-content">
-  <template>
-    <style>
-      :host {
-        display: block;
-      }
-    </style>
+<script>
 
-    <iron-ajax auto url="/data/homepage.html" handle-as="document" on-response="_handleResponse"></iron-ajax>
+  class HomepageContentElement extends Polymer.Element {
 
-    <slot></slot>
-  </template>
+    static get is() { return 'homepage-content' }
 
-  <script>
+    ready() {
+      super.ready();
 
-    class HomepageContentElement extends Polymer.Element {
-
-      static get is() { return 'homepage-content' }
-
-      _handleResponse(event) {
-        const doc = event.detail.response;
+      const xhr = new XMLHttpRequest();
+      xhr.addEventListener('load', () => {
+        const body = xhr.response.body;
         const frag = document.createDocumentFragment();
-        while (doc.body.firstChild) {
-          frag.appendChild(doc.body.firstChild);
+        while (body.firstChild) {
+          this.appendChild(body.firstChild);
         }
-
-        this.appendChild(document.importNode(frag, true));
-      }
-
+        this.appendChild(frag);
+      });
+      xhr.open('GET', '/data/homepage.html');
+      xhr.responseType = 'document';
+      xhr.send();
     }
 
-    customElements.define(HomepageContentElement.is, HomepageContentElement);
+  }
 
-  </script>
-</dom-module>
+  customElements.define(HomepageContentElement.is, HomepageContentElement);
+
+</script>

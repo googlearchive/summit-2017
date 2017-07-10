@@ -1,5 +1,4 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 
 <link rel="import" href="grid-view.html">
 <link rel="import" href="collapsible-card.html">
@@ -124,7 +123,7 @@
     </style>
 
     <grid-view>
-      <dom-repeat items="[[speakers]]">
+      <dom-repeat items="[[data]]">
         <template>
 
           <collapsible-card class="card">
@@ -154,8 +153,6 @@
         </template>
       </dom-repeat>
     </grid-view>
-
-    <iron-ajax auto="" url="/data/speakers.json" last-response="{{speakers}}"></iron-ajax>
   </template>
 
   <script>
@@ -163,6 +160,18 @@
     class SpeakersGridElement extends Polymer.Element {
 
       static get is() { return 'speakers-grid' }
+
+      ready() {
+        super.ready();
+
+        const xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', () => {
+          this.data = xhr.response;
+        });
+        xhr.open('GET', '/data/speakers.json');
+        xhr.responseType = 'json';
+        xhr.send();
+      }
 
       _gplusUrl(name) {
         return 'https://plus.google.com/' + name;

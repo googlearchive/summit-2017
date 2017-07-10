@@ -3,7 +3,6 @@
   "private": true,
   "dependencies": {
     "app-layout": "2",
-    "iron-ajax": "2",
     "polymer": "2"
   }
 }
