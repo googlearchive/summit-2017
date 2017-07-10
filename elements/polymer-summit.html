@@ -1,5 +1,4 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
-<link rel="import" href="../bower_components/iron-location/iron-location.html">
 <link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout-classes.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../bower_components/app-layout/app-scroll-effects/effects/waterfall.html">
@@ -119,8 +118,6 @@
       }
     </style>
 
-    <iron-location path="{{path}}"></iron-location>
-
     <app-header reveals effects="waterfall">
       <nav class="mobile-header-nav">
         <a href="#" on-click="_openDrawer">
@@ -175,9 +172,39 @@
           path: {
             type: String,
             observer: '_pathChanged',
+            readOnly: true,
             reflectToAttribute: true
           }
         }
+      }
+
+      ready() {
+        super.ready();
+        this.addEventListener('click', (ev) => {
+          if (ev.button !== 0 || ev.metaKey || ev.ctrlKey) {
+            return;
+          }
+
+          for (let i = 0; i < ev.path.length; ++i) {
+            const el = ev.path[i];
+            if (el === this) {
+              return;
+            }
+
+            if (el.tagName === 'A' && el.href.indexOf(window.location.origin) === 0 && !el.target) {
+              ev.preventDefault();
+              window.history.pushState(null, '', el.href);
+              this._setPath(window.location.pathname);
+              return;
+            }
+          }
+        });
+
+        window.addEventListener('popstate', () => {
+          this._setPath(window.location.pathname);
+        });
+
+        this._setPath(window.location.pathname);
       }
 
       _pathChanged() {
