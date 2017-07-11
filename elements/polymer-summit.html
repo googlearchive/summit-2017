@@ -9,10 +9,8 @@
   <template>
     <style>
       :host {
-        display: block;
-        min-height: 100vh;
         overflow: hidden;
-  
+
         --header-height: 60px;
       }
 
@@ -85,8 +83,6 @@
 
       fancy-pages {
         display: block;
-        min-height: 100vh;
-        overflow: hidden;
         margin-top: var(--header-height);
       }
 
@@ -145,18 +141,6 @@
       <schedule-grid path="/schedule"></schedule-grid>
       <speakers-grid path="/speakers"></speakers-grid>
     </fancy-pages>
-
-    <footer>
-      <div class="footer-inner responsive horizontal center layout">
-        <a class="horizontal center layout" target="_blank" href="https://www.polymer-project.org">
-          <div class="logo"></div>
-          <div class="title">Polymer</div>
-        </a>
-        <div class="flex"></div><a target="_blank" href="http://polymer.github.io/LICENSE.txt" data-outbound="license-txt">&copy; 2016 Polymer Authors</a>
-        <div class="dot-separator wide-only"></div><a target="_blank" href="https://www.polymer-project.org" data-outbound="about-polymer">About Polymer</a>
-        <div class="dot-separator wide-only"></div><a target="_blank" href="/summit/code-of-conduct.html" data-outbound="code-of-conduct">Code of Conduct</a>
-      </div>
-    </footer>
 
   </template>
 

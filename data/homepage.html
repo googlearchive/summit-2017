@@ -9,6 +9,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 <body>
     <style>
+/* TODO: Remove. Subset of iron-flex-layout classes needed for the 2016 page */
+.layout {
+    display: flex;
+}
+
+.layout.horizontal {
+    flex-direction: row;
+}
+
+.layout.center-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex {
+    flex: 1;
+}
+/* END TODO */
+
 .direction a, .header-layout[page=home] .header-tools a, .header-layout[page=home] .menu-icon, .header-layout[page=home] .toolbar-badge, .menu-item {
     outline-color: #fff
 }
@@ -353,18 +372,6 @@ paper-button.anchor-button {
     border: 2px solid #164C9C;
     border-right: none;
     border-left: none
-}
-.footer-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 24px 16px;
-    font-size: 18px;
-    color: #147BCC;
-    line-height: 48px
-}
-.footer-inner .title {
-    font-size: 20px;
-    color: #333
 }
 schedule-grid, speakers-grid {
     min-height: 90vh

@@ -4,16 +4,15 @@
   <template>
     <style>
       :host {
-        display: block;
-        @apply(--layout-horizontal);
-        @apply(--layout-wrap);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         max-width: 1264px;
         margin: 0 auto;
         padding: 8px;
       }
 
       :host > ::slotted(*) {
-        @apply(--layout-flex-none);
         width: 300px;
         margin: 8px;
         box-sizing: border-box;

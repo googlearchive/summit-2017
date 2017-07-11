@@ -50,18 +50,91 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       margin: 0;
       font-family: Roboto, sans-serif;
       background: #f2f2f2;
-      color: #000;
       font-size: 22px;
       line-height: 25px;
       letter-spacing: -.01em;
       -webkit-font-smoothing: antialiased;
-      -webkit-tap-highlight-color: transparent
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Ensure the footer does not flash where the main content will be. */
+    polymer-summit {
+      display: block;
+      min-height: 100vh;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 24px 16px;
+      font-size: 18px;
+      color: #147BCC;
+      line-height: 48px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    footer .project-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 20px;
+      color: #333;
+    }
+
+    footer .project-link img {
+      width: 40px;
+      height: 40px;
+      margin-right: 8px;
+    }
+
+    @media (min-width: 801px) {
+      footer {
+        flex-direction: row;
+      }
+
+      footer .flex {
+        flex: 1;
+      }
+
+      footer .dot-separator {
+        padding: 0 8px;
+      }
+
+      footer .dot-separator::after {
+        content: '\2022';
+      }
     }
   </style>
 </head>
 
 <body>
   <polymer-summit></polymer-summit>
+
+  <!-- Footer serves as fallback content when JavaScript is disabled. -->
+  <footer>
+    <a class="project-link" target="_blank" href="https://www.polymer-project.org">
+      <img src="/images/polymer.svg"> Polymer
+    </a>
+    <div class="flex"></div>
+    <a target="_blank" href="http://polymer.github.io/LICENSE.txt" data-outbound="license-txt">
+      &copy; 2017 Polymer Authors
+    </a>
+    <div class="dot-separator"></div>
+    <a target="_blank" href="https://www.polymer-project.org" data-outbound="about-polymer">
+      About Polymer
+    </a>
+    <div class="dot-separator"></div>
+    <a target="_blank" href="/code-of-conduct.html" data-outbound="code-of-conduct">
+      Code of Conduct
+    </a>
+  </footer>
 
   <script>
     // Register service worker, if supported, after the load event (to deprioritize it after lazy imports).
