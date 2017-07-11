@@ -1,7 +1,6 @@
 {
   "shell": "elements/polymer-summit.html",
   "fragments": [
-    "elements/homepage-content.html",
     "elements/schedule-grid.html",
     "elements/speakers-grid.html"
   ],

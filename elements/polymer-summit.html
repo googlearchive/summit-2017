@@ -9,9 +9,9 @@
   <template>
     <style>
       :host {
+        display: block;
+        min-height: 100vh;
         overflow: hidden;
-
-        --header-height: 60px;
       }
 
       nav a {
@@ -81,11 +81,6 @@
         border-left: 2px solid #000;
       }
 
-      fancy-pages {
-        display: block;
-        margin-top: var(--header-height);
-      }
-
       @media (min-width: 801px) {
         .mobile-header-nav {
           display: none;
@@ -113,7 +108,7 @@
       }
     </style>
 
-    <app-header reveals effects="waterfall">
+    <app-header id="header" reveals effects="waterfall">
       <nav class="mobile-header-nav">
         <a href="#" on-click="_openDrawer">
           <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
@@ -141,7 +136,9 @@
     </app-drawer>
 
     <fancy-pages path="[[path]]">
-      <homepage-content path="/"></homepage-content>
+      <div path="/">
+        <slot></slot>
+      </div>
       <schedule-grid path="/schedule"></schedule-grid>
       <speakers-grid path="/speakers"></speakers-grid>
     </fancy-pages>
@@ -193,6 +190,9 @@
         });
 
         this._setPath(window.location.pathname);
+
+        // HACK: When async importing the shell, header doesn't correctly initialize on schedule/speakers page without this in Chrome.
+        this.$.header.offsetHeight;
       }
 
       _pathChanged() {

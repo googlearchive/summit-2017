@@ -24,7 +24,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         will-change: transform, opacity;
       }
 
-      :host > ::slotted(.active) {
+      :host > ::slotted(.selected) {
         display: block;
         transform: translate3d(0, 0, 0);
         opacity: 1;
@@ -50,28 +50,39 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       _pathChanged(path, oldPath) {
-        if (!this.isConnected) return;
+        const oldSelected = this._findChildWithPath(oldPath);
+        const selected = this._findChildWithPath(path);
 
-        this._oldSelected = this._findChildWithPath(oldPath);
-        this._selected = this._findChildWithPath(path);
-
-        if (this._selected) {
-          Polymer.importHref(`/elements/${this._selected.localName}.html`);
+        if (selected && selected.localName.indexOf('-') !== -1) {
+          Polymer.importHref(`/elements/${selected.localName}.html`);
         }
 
-        if (this._oldSelected) {
-          this._oldSelected.style.display = 'block';
-          this._oldSelected.classList.remove('active');
-          window.setTimeout(() => {
-            this._oldSelected.style.display = '';
-            this._transitionIn();
+        if (!oldSelected) {
+          selected.classList.add('selected');
+        } else if (oldSelected !== selected) {
+          oldSelected.style.display = 'block';
+          oldSelected.classList.remove('selected');
+          setTimeout(() => {
+            oldSelected.style.display = '';
+            if (selected) {
+              window.scrollTo(0, 0);
+              selected.style.display = 'block';
+              requestAnimationFrame(() => {
+                setTimeout(() => {
+                  selected.style.display = '';
+                  selected.classList.add('selected');
+                });
+              });
+            }
           }, 500);
-        } else {
-          this._transitionIn();
         }
       }
 
       _findChildWithPath(path) {
+        if (!path) {
+          return null;
+        }
+
         const children = this.$.slot.assignedNodes();
         for (let i = 0; i < children.length; ++i) {
           const child = children[i];
@@ -80,19 +91,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           }
         }
         return null;
-      }
-
-      _transitionIn() {
-        if (this._selected) {
-          window.scrollTo(0, 0);
-          this._selected.style.display = 'block';
-          requestAnimationFrame(() => {
-            setTimeout(() => {
-              this._selected.style.display = '';
-              this._selected.classList.add('active');
-            });
-          });
-        }
       }
 
     }

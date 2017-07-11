@@ -1,3 +1,4 @@
 .firebaserc
-/bower_components
-/build
+firebase-debug.log
+bower_components
+build

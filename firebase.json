@@ -17,7 +17,7 @@
         "source": "/",
         "headers": [{
           "key": "Link",
-          "value": "</bower_components/webcomponentsjs/webcomponents-loader.js>;rel=preload;as=script,</elements/polymer-summit.html>;rel=preload;as=document,</elements/homepage-content.html>;rel=preload;as=document,</data/homepage.html>;rel=preload;as=document"
+          "value": "</bower_components/webcomponentsjs/webcomponents-loader.js>;rel=preload;as=script,</elements/polymer-summit.html>;rel=preload;as=document"
         }]
       },
       {
