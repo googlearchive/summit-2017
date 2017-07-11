@@ -15,9 +15,6 @@
       }
 
       nav a {
-        margin: 10px;
-        padding: 10px;
-        color: #000;
         text-decoration: none;
       }
 
@@ -30,21 +27,17 @@
       }
 
       app-header nav {
-        background: #FFF;
+        background: #2e9be6;
         height: var(--header-height);
-      }
-
-      app-header.transparent nav {
-        background: none;
-        text-shadow: 0 0 2px #FFF;
       }
 
       app-header nav a {
         display: inline-block;
+        margin: 20px;
+        color: #1b499b;
       }
 
       .mobile-header-nav a {
-        margin: 8px;
         height: 24px;
       }
 
@@ -62,23 +55,20 @@
         z-index: 20;
       }
 
-      app-drawer:not([opened]) {
-        visibility: hidden;
-      }
-
       app-drawer nav {
         margin-top: 40px;
       }
 
       app-drawer nav a {
         display: block;
-        border-left: 2px solid transparent;
+        padding: 14px 20px;
+        color: #000;
       }
 
       :host([path="/"]) app-drawer nav a[href="/"],
       :host([path="/schedule"]) app-drawer nav a[href="/schedule"],
       :host([path="/speakers"]) app-drawer nav a[href="/speakers"] {
-        border-left: 2px solid #000;
+        background: #ddd;
       }
 
       @media (min-width: 801px) {
@@ -88,7 +78,8 @@
 
         .desktop-header-nav {
           display: block;
-          text-align: right;
+          font-weight: bold;
+          text-align: center;
         }
 
         .desktop-header-nav button {
@@ -97,13 +88,13 @@
         }
 
         .desktop-header-nav a:hover {
-          border-bottom: 2px solid #CCC;
+          text-decoration: underline;
         }
 
         :host([path="/"]) .desktop-header-nav a[href="/"],
         :host([path="/schedule"]) .desktop-header-nav a[href="/schedule"],
         :host([path="/speakers"]) .desktop-header-nav a[href="/speakers"] {
-          border-bottom: 2px solid #000;
+          color: #fff;
         }
       }
     </style>

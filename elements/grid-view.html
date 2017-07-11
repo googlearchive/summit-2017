@@ -7,50 +7,34 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        max-width: 1264px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 8px;
       }
 
       :host > ::slotted(*) {
         width: 300px;
-        margin: 8px;
         box-sizing: border-box;
       }
 
-      @media (max-width: 1299px) {
+      @media (max-width: 1220px) {
         :host {
-          max-width: 948px;
+          max-width: 900px;
         }
       }
 
-      @media (max-width: 983px) {
+      @media (max-width: 920px) {
         :host {
-          max-width: 632px;
+          max-width: 600px;
         }
       }
 
-      @media (max-width: 667px) {
-        :host {
-          max-width: 616px;
-          padding: 4px;
-        }
-
-        :host > ::slotted(*) {
-          margin: 4px;
-        }
-      }
-
-      @media (max-width: 643px) {
+      @media (max-width: 620px) {
         :host {
           max-width: none;
-          padding: 0;
-          margin: 0;
         }
 
         :host > ::slotted(*) {
           width: 100%;
-          margin: 0;
         }
       }
     </style>
