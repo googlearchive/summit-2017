@@ -8,6 +8,7 @@
   "sources": [
     "data/**/*",
     "images/**/*",
+    "code-of-conduct.html",
     "manifest.json"
   ],
   "builds": [{

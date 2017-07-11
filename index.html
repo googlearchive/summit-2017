@@ -15,7 +15,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="Two days of sessions and codelabs on all things Polymer and Web Components - building great components and apps, scaling within an organization, and more.">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
-  <title>Polymer Summit 2016</title>
+  <title>Polymer Summit 2017</title>
   <link rel="shortcut icon" href="/images/logo-32.png">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="Polymer Summit 2016">
@@ -41,7 +41,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="theme-color" content="#1e88e5">
 
   <link rel="manifest" href="/manifest.json">
-  <link rel="import" href="/elements/polymer-summit.html">
+  <link rel="import" href="/elements/polymer-summit.html" async>
 
   <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
@@ -71,7 +71,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       margin: 0 auto;
       padding: 24px 16px;
       font-size: 18px;
-      color: #147BCC;
+      color: #116baf;
       line-height: 48px;
     }
 
@@ -115,23 +115,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 
 <body>
-  <polymer-summit></polymer-summit>
+  <!-- <main> used as landmark region for a11y - see https://dequeuniversity.com/rules/axe/1.1/bypass. -->
+  <main>
+    <polymer-summit></polymer-summit>
+  </main>
 
   <!-- Footer serves as fallback content when JavaScript is disabled. -->
   <footer>
-    <a class="project-link" target="_blank" href="https://www.polymer-project.org">
-      <img src="/images/polymer.svg"> Polymer
+    <a class="project-link" target="_blank" rel="noopener" href="https://www.polymer-project.org">
+      <img src="/images/polymer.svg" alt="Polymer logo"> Polymer
     </a>
     <div class="flex"></div>
-    <a target="_blank" href="http://polymer.github.io/LICENSE.txt" data-outbound="license-txt">
+    <a target="_blank" rel="noopener" href="http://polymer.github.io/LICENSE.txt" data-outbound="license-txt">
       &copy; 2017 Polymer Authors
     </a>
     <div class="dot-separator"></div>
-    <a target="_blank" href="https://www.polymer-project.org" data-outbound="about-polymer">
+    <a target="_blank" rel="noopener" href="https://www.polymer-project.org" data-outbound="about-polymer">
       About Polymer
     </a>
     <div class="dot-separator"></div>
-    <a target="_blank" href="/code-of-conduct.html" data-outbound="code-of-conduct">
+    <a target="_blank" rel="noopener" href="/code-of-conduct.html" data-outbound="code-of-conduct">
       Code of Conduct
     </a>
   </footer>
@@ -173,6 +176,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       });
     }
+
+    window.addEventListener('beforeinstallprompt', function(e) {
+      // beforeinstallprompt Event fired
+
+      // e.userChoice will return a Promise. 
+      // For more details read: https://developers.google.com/web/fundamentals/getting-started/primers/promises
+      e.userChoice.then(function(choiceResult) {
+        if (choiceResult.outcome == 'dismissed') {
+          console.log('User cancelled home screen install');
+        }
+        else {
+          console.log('User added to home screen');
+        }
+      });
+    });
   </script>
 </body>
 </html>
