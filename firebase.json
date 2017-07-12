@@ -33,6 +33,13 @@
           "key": "Link",
           "value": "</bower_components/webcomponentsjs/webcomponents-loader.js>;rel=preload;as=script,</elements/polymer-summit.html>;rel=preload;as=document,</elements/speakers-grid.html>;rel=preload;as=document,</data/speakers.json>;rel=preload"
         }]
+      },
+      {
+        "source" : "/service-worker.js",
+        "headers" : [{
+          "key": "Cache-Control",
+          "value": "max-age=0"
+        }]
       }
     ]
   }

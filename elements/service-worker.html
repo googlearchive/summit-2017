@@ -1,0 +1,94 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="service-worker">
+  <template>
+    <style>
+      aside {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 14px;
+        background: #333;
+        color: #fff;
+        font-size: 18px;
+        visibility: hidden;
+        transform: translate3d(0, 100%, 0);
+        transition-property: transform, visibility;
+        transition-duration: 0.2s;
+        will-change: transform, visibility;
+      }
+
+      aside.visible {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+      }
+
+      #updatedMessage span {
+        flex: 1;
+      }
+
+      #updatedMessage a {
+        text-decoration: none;
+        color: #2e9be6;
+        font-weight: bold;
+      }
+    </style>
+
+    <aside id="installedMessage">Site cached for offline use</aside>
+
+    <aside id="updatedMessage">
+      <span>Site updated</span>
+      <a href on-click="_reload">Reload</a>
+    </aside>
+  </template>
+
+  <script>
+
+    class ServiceWorkerElement extends Polymer.Element {
+
+      static get is() { return 'service-worker' }
+
+      ready() {
+        super.ready();
+
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+            registration.addEventListener('updatefound', () => {
+              const installingWorker = registration.installing;
+              installingWorker.addEventListener('statechange', () => {
+                if (installingWorker.state === 'installed' && !navigator.serviceWorker.controller) {
+                  this.$.installedMessage.classList.add('visible');
+                  setTimeout(() => {
+                    this.$.installedMessage.classList.remove('visible');
+                  }, 5000);
+                }
+              });
+            });
+          });
+
+          // Check to see if the service worker controlling the page at initial load
+          // has become redundant, since this implies there's a new service worker with fresh content.
+          if (navigator.serviceWorker.controller) {
+            navigator.serviceWorker.controller.addEventListener('statechange', (event) => {
+              if (event.target.state === 'redundant') {
+                this.$.updatedMessage.classList.add('visible');
+              }
+            });
+          }
+        }
+      }
+
+      _reload() {
+        window.location.reload();
+      }
+
+    }
+
+    customElements.define(ServiceWorkerElement.is, ServiceWorkerElement);
+
+  </script>
+</dom-module>
