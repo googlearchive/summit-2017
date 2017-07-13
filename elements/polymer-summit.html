@@ -116,7 +116,7 @@
         <a href="/">Home</a>
         <a href="/schedule">Schedule</a>
         <a href="/speakers">Speakers</a>
-        <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank" rel="noopener">
+        <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank" rel="noopener" data-outbound>
           Codelabs
         </a>
       </nav>
@@ -128,7 +128,7 @@
         <a href="/">Home</a>
         <a href="/schedule">Schedule</a>
         <a href="/speakers">Speakers</a>
-        <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank" rel="noopener">
+        <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank" rel="noopener" data-outbound>
           Codelabs
         </a>
       </nav>
@@ -165,32 +165,59 @@
 
       ready() {
         super.ready();
-        this.addEventListener('click', (event) => {
-          if (event.button !== 0 || event.metaKey || event.ctrlKey) {
+
+        // Install click and popstate handlers for routing.
+        window.addEventListener('click', (event) => {
+          if (event.button !== 0) {
             return;
           }
 
           const eventPath = event.composedPath();
           for (let i = 0; i < eventPath.length; ++i) {
             const el = eventPath[i];
+
+            // This element isn't in any anchor tag, so bail early.
             if (el === this) {
               return;
             }
 
-            if (el.tagName === 'A' && el.href.indexOf(window.location.origin) === 0 && !el.target) {
+            if (el.tagName !== 'A') {
+              continue;
+            }
+
+            // At this point, el is definitely an anchor tag. Track outbound link clicks,
+            // if applicable.
+            if (el.getAttribute('data-outbound') !== null) {
+              ga('send', 'event', 'outbound' /* category */, 'click' /* action */, el.href /* label */);
+            }
+
+            // Don't do pushState navigation when opening in new tab/window.
+            if (event.metaKey || event.ctrlKey || el.target) {
+              return;
+            }
+
+            // Same origin links in the same window - do pushState navigation.
+            if (el.href.indexOf(window.location.origin) === 0) {
               event.preventDefault();
               window.history.pushState(null, '', el.href);
               this._setPath(window.location.pathname);
-              return;
             }
+
+            return;
           }
         });
-
         window.addEventListener('popstate', () => {
           this._setPath(window.location.pathname);
         });
-
         this._setPath(window.location.pathname);
+
+        // Track install prompts.
+        window.addEventListener('beforeinstallprompt', function(e) {
+          ga('send', 'event', 'installprompt' /* category */, 'prompted' /* action */);
+          e.userChoice.then(function(result) {
+            ga('send', 'event', 'installprompt' /* category */, result.outcome /* action */);
+          });
+        });
 
         /**
          * NOTE(keanulee): We want the homepage to paint before JS loads, but if it turns out that
@@ -206,8 +233,12 @@
         this.$.header.offsetHeight;
       }
 
-      _pathChanged() {
+      _pathChanged(path) {
         this.$.drawer.close();
+
+        // Google Analytics - see https://developers.google.com/analytics/devguides/collection/analyticsjs/single-page-applications
+        ga('set', 'page', path);
+        ga('send', 'pageview');
       }
 
       _openDrawer() {
