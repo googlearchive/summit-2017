@@ -231,6 +231,9 @@
          * schedule/speakers page without this in Chrome.
          */
         this.$.header.offsetHeight;
+
+        // Track time elapsed since page load.
+        ga('send', 'timing', 'shell element', 'ready', Math.round(performance.now()));
       }
 
       _pathChanged(path) {
