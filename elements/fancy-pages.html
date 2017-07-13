@@ -58,7 +58,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
 
         if (!oldSelected) {
-          selected.classList.add('selected');
+          selected && selected.classList.add('selected');
         } else if (oldSelected !== selected) {
           oldSelected.style.display = 'block';
           oldSelected.classList.remove('selected');

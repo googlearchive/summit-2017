@@ -192,7 +192,17 @@
 
         this._setPath(window.location.pathname);
 
-        // HACK: When async importing the shell, header doesn't correctly initialize on schedule/speakers page without this in Chrome.
+        /**
+         * NOTE(keanulee): We want the homepage to paint before JS loads, but if it turns out that
+         * another page is requested, we don't want to FOUC homepage content. This class is added
+         * in a synchronous <script> in index.html.
+         */
+        document.body.classList.remove('unresolved');
+
+        /**
+         * HACK(keanulee): When async importing the shell, header doesn't correctly initialize on
+         * schedule/speakers page without this in Chrome.
+         */
         this.$.header.offsetHeight;
       }
 
