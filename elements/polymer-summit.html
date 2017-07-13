@@ -28,23 +28,25 @@
       }
 
       app-header nav {
-        background: #2e9be6;
+        background: var(--blue-theme-color);
         height: var(--header-height);
       }
 
       app-header nav a {
         display: inline-block;
-        margin: 20px;
-        color: #1b499b;
+        margin: 15px;
+        color: #000;
       }
 
       .mobile-header-nav a {
-        height: 24px;
+        height: 30px;
       }
 
       .mobile-header-nav a svg {
         width: 24px;
         height: 24px;
+        padding: 3px;
+        fill: #fff;
       }
 
       .desktop-header-nav {
@@ -54,15 +56,19 @@
       app-drawer {
         position: fixed;
         z-index: 20;
+        font-size: 16px;
       }
 
-      app-drawer nav {
-        margin-top: 40px;
+      app-drawer header {
+        background: url(/images/backgrounds/header-bg.png) center bottom / auto 80px repeat-x var(--blue-theme-color);
+        padding: 100px 20px 8px;
+        margin-bottom: 8px;
+        color: #fff;
       }
 
       app-drawer nav a {
         display: block;
-        padding: 14px 20px;
+        padding: 8px 20px;
         color: #000;
       }
 
@@ -117,6 +123,7 @@
     </app-header>
 
     <app-drawer id="drawer" swipe-open no-focus-trap>
+      <header>Polymer Summit 2017</header>
       <nav>
         <a href="/">Home</a>
         <a href="/schedule">Schedule</a>
