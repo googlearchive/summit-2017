@@ -48,6 +48,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <style>
     html {
       --header-height: 60px;
+      --section-padding: 20px;
+      --bg-pattern-height: 80px; 
       --blue-theme-color: #2e9be6;
       --pink-theme-color: #e9437a;
       --grey-theme-color: #eceff1;
@@ -75,7 +77,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     header,
     section,
     footer {
-      padding: 40px 20px;
+      padding: var(--section-padding);
     }
 
     .grey {
@@ -97,10 +99,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       color: #fff;
     }
 
-    header {
-      padding-bottom: 120px;
+    header,
+    footer {
+      padding-bottom: calc(var(--section-padding) + var(--bg-pattern-height));
       text-align: center;
-      background: url(/images/backgrounds/header-bg.png) center bottom / auto 80px repeat-x;
+      background: url(/images/backgrounds/header-bg.png) center bottom / auto var(--bg-pattern-height) repeat-x;
     }
 
     header img {
@@ -109,7 +112,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     .welcome {
       max-width: 600px;
-      margin: 0 auto;
+      margin: 1em auto;
       font-weight: bold;
     }
 
@@ -157,9 +160,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
 
     footer {
-      padding-bottom: 120px;
-      text-align: center;
-      background: url(/images/backgrounds/footer-bg.png) center bottom / auto 80px repeat-x var(--grey-theme-color);
+      background-color: var(--grey-theme-color);
+      background-image: url(/images/backgrounds/footer-bg.png)
     }
 
     footer img {
@@ -169,7 +171,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     footer hr {
       max-width: 800px;
-      margin: 40px auto;
+      margin: var(--section-padding) auto;
       border: 2px solid rgb(38, 50, 56);
     }
 
@@ -178,17 +180,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       color: var(--blue-theme-color);
     }
 
-    @media (min-width: 801px) {
-      header,
-      section,
-      footer {
-        padding: 60px;
-      }
-
-      header,
-      footer {
-        padding-bottom: 180px;
-        background-size: auto 120px;
+    @media (min-width: 768px) {
+      html {
+        --section-padding: 60px;
+        --bg-pattern-height: 120px;
       }
 
       header img {
@@ -201,10 +196,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       .row > * {
         flex: 1;
-      }
-
-      footer hr {
-        margin: 60px auto;
       }
     }
   </style>
