@@ -15,32 +15,52 @@
     "headers": [
       {
         "source": "/",
-        "headers": [{
-          "key": "Link",
-          "value": "</bower_components/webcomponentsjs/webcomponents-loader.js>;rel=preload;as=script,</elements/polymer-summit.html>;rel=preload;as=document"
-        }]
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bower_components/webcomponentsjs/webcomponents-loader.js>;rel=preload;as=script,</elements/polymer-summit.html>;rel=preload;as=document"
+          }
+        ]
       },
       {
         "source": "/schedule",
-        "headers": [{
-          "key": "Link",
-          "value": "</bower_components/webcomponentsjs/webcomponents-loader.js>;rel=preload;as=script,</elements/polymer-summit.html>;rel=preload;as=document,</elements/schedule-grid.html>;rel=preload;as=document,</data/schedule.json>;rel=preload"
-        }]
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bower_components/webcomponentsjs/webcomponents-loader.js>;rel=preload;as=script,</elements/polymer-summit.html>;rel=preload;as=document,</elements/schedule-grid.html>;rel=preload;as=document,</data/schedule.json>;rel=preload"
+          }
+        ]
       },
       {
         "source": "/speakers",
-        "headers": [{
-          "key": "Link",
-          "value": "</bower_components/webcomponentsjs/webcomponents-loader.js>;rel=preload;as=script,</elements/polymer-summit.html>;rel=preload;as=document,</elements/speakers-grid.html>;rel=preload;as=document,</data/speakers.json>;rel=preload"
-        }]
+        "headers": [
+          {
+            "key": "Link",
+            "value": "</bower_components/webcomponentsjs/webcomponents-loader.js>;rel=preload;as=script,</elements/polymer-summit.html>;rel=preload;as=document,</elements/speakers-grid.html>;rel=preload;as=document,</data/speakers.json>;rel=preload"
+          }
+        ]
       },
       {
-        "source" : "/service-worker.js",
-        "headers" : [{
-          "key": "Cache-Control",
-          "value": "max-age=0"
-        }]
+        "source": "/service-worker.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0"
+          }
+        ]
+      },
+      {
+        "source": "/sw-imported.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=0"
+          }
+        ]
       }
     ]
+  },
+  "database": {
+    "rules": "database.rules.json"
   }
 }

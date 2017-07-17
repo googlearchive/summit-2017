@@ -52,6 +52,15 @@
 
       static get is() { return 'service-worker' }
 
+      static get properties() {
+        return {
+          notificationsStatus: {
+            type: Boolean,
+            notify: true
+          }
+        }
+      }
+
       ready() {
         super.ready();
 
@@ -68,6 +77,12 @@
                 }
               });
             });
+
+            if ('PushManager' in window && 'Notification' in window) {
+              registration.pushManager.getSubscription().then((subscription) => {
+                this.notificationsStatus = subscription ? 'subscribed' : 'unsubscribed';
+              });
+            }
           });
 
           // Check to see if the service worker controlling the page at initial load

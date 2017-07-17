@@ -1,0 +1,112 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="push-notifications">
+  <template>
+    <style>
+      :host {
+        width: 30px;
+      }
+
+      a {
+        color: #fff;
+      }
+
+      :host([disabled]) a {
+        color: #97ccf1;
+        pointer-events: none;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        padding: 3px;
+        fill: currentColor;
+      }
+
+      :host([notifications-status="unsubscribed"]) .subscribed,
+      :host([notifications-status="subscribed"]) .unsubscribed {
+        display: none;
+      }
+    </style>
+
+    <a href="#" class="unsubscribed" on-click="_subscribe">
+      <svg><path d="M20 18.69L7.84 6.14 5.27 3.49 4 4.76l2.8 2.8v.01c-.52.99-.8 2.16-.8 3.42v5l-2 2v1h13.73l2 2L21 19.72l-1-1.03zM12 22c1.11 0 2-.89 2-2h-4c0 1.11.89 2 2 2zm6-7.32V11c0-3.08-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68c-.15.03-.29.08-.42.12-.1.03-.2.07-.3.11h-.01c-.01 0-.01 0-.02.01-.23.09-.46.2-.68.31 0 0-.01 0-.01.01L18 14.68z"></path></svg>
+    </a>
+    <a href="#" class="subscribed" on-click="_unsubscribe">
+      <svg><path d="M7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42zM18 11c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2v-5zm-6 11c.14 0 .27-.01.4-.04.65-.14 1.18-.58 1.44-1.18.1-.24.15-.5.15-.78h-4c.01 1.1.9 2 2.01 2z"></path></svg>
+    </a>
+  </template>
+
+  <script>
+
+    class PushNotificationsElement extends Polymer.Element {
+
+      static get is() { return 'push-notifications' }
+
+      static get properties() {
+        return {
+          disabled: {
+            type: Boolean,
+            reflectToAttribute: true
+          },
+
+          notificationsStatus: {
+            type: Boolean,
+            notify: true,
+            reflectToAttribute: true
+          }
+        }
+      }
+
+      _subscribe() {
+        // Disable button until flow finishes.
+        this.disabled = true;
+
+        Notification.requestPermission().then((permission) => {
+          if (permission === 'granted') {
+            navigator.serviceWorker.getRegistration()
+            .then((registration) => {
+              return registration.pushManager.subscribe({
+                userVisibleOnly: true,
+                // Bit array of base 64 encoded public key of
+                // 'BI77qNfNf3S-lcgtLneYKuQyJ80--75XZdrvUAGN3iG3D8b1M41aqYcDcXWPEJkdHuqzZHxojyl3HKtAH1mBQNE');
+                applicationServerKey: new Uint8Array([4,142,251,168,215,205,127,116,190,149,200,45,46,119,152,42,228,50,39,205,62,251,190,87,101,218,239,80,1,141,222,33,183,15,198,245,51,141,90,169,135,3,113,117,143,16,153,29,30,234,179,100,124,104,143,41,119,28,171,64,31,89,129,64,209])
+              });
+            })
+            .then((subscription) => {
+              return fetch('https://polymer-summit-2017.firebaseio.com/subscriptions.json', {
+                method: 'POST',
+                body: JSON.stringify(subscription)
+              })
+            })
+            .then(() => {
+              this.notificationsStatus = 'subscribed';
+              this.disabled = false;
+            })
+            .catch((err) => {
+              this.disabled = false;
+            });
+          } else if (permission === 'denied') {
+            // Keep button permanently disabled, since user will not be prompted to re-enable again.
+            // TODO: Tell user how to re-enable in Chrome Site Settings.
+          } else {
+            this.disabled = false;
+          }
+        });
+      }
+
+      _unsubscribe() {
+        navigator.serviceWorker.getRegistration()
+        .then((registration) => registration.pushManager.getSubscription())
+        .then((subscription) => subscription.unsubscribe())
+        .then(() => {
+          this.notificationsStatus = 'unsubscribed';
+        });
+      }
+
+    }
+
+    customElements.define(PushNotificationsElement.is, PushNotificationsElement);
+
+  </script>
+</dom-module>

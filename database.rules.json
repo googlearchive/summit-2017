@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "subscriptions": {
+      "$subscription_id": {
+        ".read": false,
+        ".write": "!data.exists() && newData.exists()",
+        ".validate": "newData.hasChildren(['endpoint', 'keys']) && newData.child('keys').hasChildren(['auth', 'p256dh'])"
+      }
+    }
+  }
+}

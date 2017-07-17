@@ -8,7 +8,8 @@
     "data/**/*",
     "images/**/*",
     "code-of-conduct.html",
-    "manifest.json"
+    "manifest.json",
+    "sw-imported.js"
   ],
   "builds": [{
     "bundle": true,

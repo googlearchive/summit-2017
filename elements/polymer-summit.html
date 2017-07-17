@@ -5,6 +5,7 @@
 
 <link rel="import" href="fancy-pages.html">
 <link rel="import" href="service-worker.html">
+<link rel="import" href="push-notifications.html">
 
 <dom-module id="polymer-summit">
   <template>
@@ -30,19 +31,18 @@
       app-header nav {
         background: var(--blue-theme-color);
         height: var(--header-height);
+        display: flex;
       }
 
-      app-header nav a {
+      app-header nav a,
+      push-notifications {
         display: inline-block;
         margin: 15px;
+        height: 30px;
         color: #000;
       }
 
-      .mobile-header-nav a {
-        height: 30px;
-      }
-
-      .mobile-header-nav a svg {
+      app-header nav a svg {
         width: 24px;
         height: 24px;
         padding: 3px;
@@ -50,7 +50,28 @@
       }
 
       .desktop-header-nav {
-        display: none;
+        flex: 1;
+        font-weight: bold;
+        text-align: center;
+        visibility: hidden;
+      }
+
+      .desktop-header-nav a:hover {
+        text-decoration: underline;
+      }
+
+      :host([path="/"]) .desktop-header-nav a[href="/"],
+      :host([path="/schedule"]) .desktop-header-nav a[href="/schedule"],
+      :host([path="/speakers"]) .desktop-header-nav a[href="/speakers"] {
+        color: #fff;
+      }
+
+      push-notifications {
+        visibility: hidden;
+      }
+
+      push-notifications[notifications-status] {
+        visibility: visible;
       }
 
       app-drawer {
@@ -79,49 +100,33 @@
       }
 
       @media (min-width: 768px) {
-        .mobile-header-nav {
-          display: none;
+        .drawer-toggle {
+          visibility: hidden;
         }
 
         .desktop-header-nav {
-          display: block;
-          font-weight: bold;
-          text-align: center;
-        }
-
-        .desktop-header-nav button {
-          background: none;
-          border: none;
-        }
-
-        .desktop-header-nav a:hover {
-          text-decoration: underline;
-        }
-
-        :host([path="/"]) .desktop-header-nav a[href="/"],
-        :host([path="/schedule"]) .desktop-header-nav a[href="/schedule"],
-        :host([path="/speakers"]) .desktop-header-nav a[href="/speakers"] {
-          color: #fff;
+          visibility: visible;
         }
       }
     </style>
 
     <app-header id="header" reveals effects="waterfall">
-      <nav class="mobile-header-nav">
-        <a href="#" on-click="_openDrawer">
+      <nav>
+        <a href="#" class="drawer-toggle" on-click="_openDrawer">
           <svg><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
         </a>
-      </nav>
-      <nav class="desktop-header-nav">
-        <a href="/">Home</a>
-        <a href="/schedule">Schedule</a>
-        <a href="/speakers">Speakers</a>
-        <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank" rel="noopener" data-outbound>
-          Codelabs
-        </a>
-        <a href="https://events.withgoogle.com/polymer-summit-2017/registrations/new/" target="_blank" rel="noopener" data-outbound>
-          Register
-        </a>
+        <div class="desktop-header-nav">
+          <a href="/">Home</a>
+          <a href="/schedule">Schedule</a>
+          <a href="/speakers">Speakers</a>
+          <a href="https://codelabs.developers.google.com/polymer-summit-2016" target="_blank" rel="noopener" data-outbound>
+            Codelabs
+          </a>
+          <a href="https://events.withgoogle.com/polymer-summit-2017/registrations/new/" target="_blank" rel="noopener" data-outbound>
+            Register
+          </a>
+        </div>
+        <push-notifications notifications-status="{{notificationsStatus}}"></push-notifications>
       </nav>
     </app-header>
 
@@ -148,7 +153,7 @@
       <speakers-grid path="/speakers"></speakers-grid>
     </fancy-pages>
 
-    <service-worker></service-worker>
+    <service-worker notifications-status="{{notificationsStatus}}"></service-worker>
 
   </template>
 
@@ -165,6 +170,10 @@
             observer: '_pathChanged',
             readOnly: true,
             reflectToAttribute: true
+          },
+
+          notificationsStatus: {
+            type: Boolean
           }
         }
       }

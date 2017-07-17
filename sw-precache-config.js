@@ -13,5 +13,8 @@ module.exports = {
       urlPattern: /\/data\//,
       handler: 'networkFirst'
     }
+  ],
+  importScripts: [
+    'sw-imported.js'
   ]
 };
