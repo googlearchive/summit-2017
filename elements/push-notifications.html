@@ -5,6 +5,11 @@
     <style>
       :host {
         width: 30px;
+        visibility: hidden;
+      }
+
+      :host([notifications-status]) {
+        visibility: visible;
       }
 
       a {

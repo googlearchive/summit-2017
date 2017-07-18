@@ -1,0 +1,20 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<script>
+
+  class CollapsibleContentElement extends Polymer.Element {
+
+    static get is() { return 'collapsible-content' }
+
+    ready() {
+      super.ready();
+      this.addEventListener('click', () => {
+        this.classList.toggle('opened');
+      });
+    }
+
+  }
+
+  customElements.define(CollapsibleContentElement.is, CollapsibleContentElement);
+
+</script>

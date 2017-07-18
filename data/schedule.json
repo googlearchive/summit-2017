@@ -1,8 +1,6 @@
 [
   {
-    "date":"October 17th, 10am-6pm",
-    "day":"Monday",
-    "mc": "MC: Matt McNulty",
+    "date": "Tuesday, August 22",
     "sessions":[
       {
         "name": "Registration",
@@ -161,9 +159,7 @@
     ]
   },
   {
-    "date":"October 18th, 10am-6pm",
-    "day":"Tuesday",
-    "mc": "MC: Meownica",
+    "date": "Wednesday, August 23",
     "sessions":[
       {
         "name": "Registration/Breakfast",

@@ -1,0 +1,86 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/polymer/lib/elements/dom-repeat.html">
+
+<link rel="import" href="collapsible-content.html">
+<link rel="import" href="grid-view-shared-styles.html">
+
+<dom-module id="schedule-page">
+  <template>
+    <style include="grid-view-shared-styles">
+      .card.date-card {
+        background: #194b9c;
+        color: #fff;
+      }
+
+      .card.date-card h2 {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 0.3em;
+        font-size: 2em;
+        line-height: 1.3em;
+      }
+
+      .time,
+      .location {
+        color: #555;
+      }
+
+      .video {
+        color: #147bcc;
+      }
+    </style>
+
+    <div class="grid">
+      <dom-repeat items="[[data]]">
+        <template>
+
+          <div class="card date-card">
+            <h2>[[item.date]]</h2>
+          </div>
+
+          <dom-repeat items="[[item.sessions]]">
+            <template>
+              <collapsible-content class="card">
+                <div class="summary">
+                  <h3>[[item.name]]</h3>
+                  <h4>[[item.speaker]]</h4>
+                  <div class="time">[[item.time]]</div>
+                  <div class="location">[[item.location]]</div>
+                  <a href$="[[item.video]]" class="video">WATCH THE VIDEO</a>
+                  <svg class="toggle-icon" viewBox="0 0 24 24"><g><path d="M7 10l5 5 5-5z"></path></g></svg>
+                </div>
+
+                <p class="details">[[item.desc]]</p>
+              </collapsible-content>
+            </template>
+          </dom-repeat>
+
+        </template>
+      </dom-repeat>
+    </div>
+  </template>
+
+  <script>
+
+    class SchedulePageElement extends Polymer.Element {
+
+      static get is() { return 'schedule-page' }
+
+      ready() {
+        super.ready();
+
+        // Use XHR instead of fetch for preload - see https://bugs.chromium.org/p/chromium/issues/detail?id=652228.
+        const xhr = new XMLHttpRequest();
+        xhr.addEventListener('load', () => {
+          this.data = xhr.response;
+        });
+        xhr.open('GET', '/data/schedule.json');
+        xhr.responseType = 'json';
+        xhr.send();
+      }
+
+    }
+
+    customElements.define(SchedulePageElement.is, SchedulePageElement);
+
+  </script>
+</dom-module>

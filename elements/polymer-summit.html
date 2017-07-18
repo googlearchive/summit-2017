@@ -66,14 +66,6 @@
         color: #fff;
       }
 
-      push-notifications {
-        visibility: hidden;
-      }
-
-      push-notifications[notifications-status] {
-        visibility: visible;
-      }
-
       app-drawer {
         position: fixed;
         z-index: 20;
@@ -149,8 +141,8 @@
       <div path="/">
         <slot></slot>
       </div>
-      <schedule-grid path="/schedule"></schedule-grid>
-      <speakers-grid path="/speakers"></speakers-grid>
+      <schedule-page path="/schedule"></schedule-page>
+      <speakers-page path="/speakers"></speakers-page>
     </fancy-pages>
 
     <service-worker notifications-status="{{notificationsStatus}}"></service-worker>

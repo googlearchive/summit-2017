@@ -1,8 +1,8 @@
 {
   "shell": "elements/polymer-summit.html",
   "fragments": [
-    "elements/schedule-grid.html",
-    "elements/speakers-grid.html"
+    "elements/schedule-page.html",
+    "elements/speakers-page.html"
   ],
   "sources": [
     "data/**/*",

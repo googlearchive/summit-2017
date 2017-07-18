@@ -1,0 +1,114 @@
+<dom-module id="grid-view-shared-styles">
+  <template>
+    <style>
+      :host {
+        --card-padding: 20px;
+        font-size: 18px;
+      }
+
+      a {
+        text-decoration: none;
+        display: none;
+      }
+
+      a[href] {
+        display: inline;
+      }
+
+      h2,
+      h3,
+      h4 {
+        margin: 0.5em 0;
+      }
+
+      .grid {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background: var(--grey-theme-color);
+      }
+
+      .card {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        padding: var(--card-padding);
+        position: relative;
+        background: #e4e4e4;
+      }
+
+      .card:nth-child(even) {
+        background: #fff;
+      }
+
+      .summary {
+        position: relative;
+      }
+
+      h3 {
+        color: #194b9c;
+      }
+
+      h4 {
+        color: #147bcc;
+      }
+
+      .card .toggle-icon {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 40px;
+        height: 40px;
+        fill: #147bcc;
+        cursor: pointer;
+      }
+
+      .card.opened .toggle-icon {
+        transform: rotate(180deg);
+      }
+
+      .card .details {
+        border-top: 1px solid rgb(250, 110, 156);
+        margin-top: var(--card-padding);
+        padding-top: var(--card-padding);
+        display: none;
+      }
+
+      .card.opened .details {
+        display: block;
+      }
+
+      @media (min-width: 600px) {
+        .toggle-icon {
+          display: none;
+        }
+
+        .card {
+          width: 50%;
+        }
+
+        .card .details {
+          display: block;
+        }
+      }
+
+      @media (min-width: 900px) {
+        .card {
+          width: 33.3%;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .card {
+          width: 25%;
+        }
+      }
+
+      @media (min-width: 1500px) {
+        .card {
+          width: 20%;
+        }
+      }
+    </style>
+  </template>
+</dom-module>
