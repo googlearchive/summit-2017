@@ -2,15 +2,15 @@
   "name": "Polymer Summit 2017",
   "short_name": "Summit 2017",
   "icons": [{
-    "src": "https://www.polymer-project.org/images/logos/p-logo-32.png",
+    "src": "/images/logos/p-logo-32.png",
     "type": "image/png",
     "sizes": "32x32"
   }, {
-    "src": "https://www.polymer-project.org/images/logos/p-logo-192.png",
+    "src": "/images/logos/p-logo-192.png",
     "type": "image/png",
     "sizes": "192x192"
   }, {
-    "src": "https://www.polymer-project.org/images/logos/p-logo-512.png",
+    "src": "/images/logos/p-logo-512.png",
     "type": "image/png",
     "sizes": "512x512"
   }],

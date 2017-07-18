@@ -13,31 +13,31 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="Two days of sessions and codelabs on all things Polymer and Web Components - building great components and apps, scaling within an organization, and more.">
+  <meta name="description" content="Join us for two days of talks, codelabs, and breakout sessions from the Polymer team, Googlers, and major companies using Polymer and Web Components.">
   <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1">
   <title>Polymer Summit 2017</title>
-  <link rel="shortcut icon" href="/images/logo-32.png">
+  <link rel="shortcut icon" href="/images/logos/p-logo-32.png">
   <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="Polymer Summit 2016">
+  <meta name="application-name" content="Polymer Summit 2017">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Polymer Summit 2016">
-  <meta itemprop="name" content="Polymer Summit 2016">
-  <meta itemprop="description" content="Two days of sessions and codelabs on all things Polymer and Web Components - building great components and apps, scaling within an organization, and more.">
-  <meta itemprop="image" content="https://www.polymer-project.org/summit/images/badge-2016.png">
-  <meta itemprop="startDate" content="2016-10-17T00:00:00Z">
-  <meta itemprop="endDate" content="2016-10-18T23:59:59Z">
+  <meta name="apple-mobile-web-app-title" content="Polymer Summit 2017">
+  <meta itemprop="name" content="Polymer Summit 2017">
+  <meta itemprop="description" content="Join us for two days of talks, codelabs, and breakout sessions from the Polymer team, Googlers, and major companies using Polymer and Web Components.">
+  <meta itemprop="image" content="/images/banners/banner.png">
+  <meta itemprop="startDate" content="2017-08-22T00:00:00Z">
+  <meta itemprop="endDate" content="2017-08-23T23:59:59Z">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@Polymer">
-  <meta name="twitter:title" content="Polymer Summit 2016">
-  <meta name="twitter:description" content="Two days of sessions and codelabs on all things Polymer and Web Components - building great components and apps, scaling within an organization, and more.">
-  <meta name="twitter:image" content="https://www.polymer-project.org/summit/images/badge-2016-banner.png">
-  <meta name="twitter:image:alt" content="Polymer Summit 2016 logo">
-  <meta property="og:title" content="Polymer Summit 2016">
-  <meta property="og:site_name" content="Polymer Summit 2016">
+  <meta name="twitter:title" content="Polymer Summit 2017">
+  <meta name="twitter:description" content="Join us for two days of talks, codelabs, and breakout sessions from the Polymer team, Googlers, and major companies using Polymer and Web Components.">
+  <meta name="twitter:image" content="/images/banners/banner.png">
+  <meta name="twitter:image:alt" content="Polymer logo">
+  <meta property="og:title" content="Polymer Summit 2017">
+  <meta property="og:site_name" content="Polymer Summit 2017">
   <meta property="og:type" content="website">
-  <meta property="og:description" content="Two days of sessions and codelabs on all things Polymer and Web Components - building great components and apps, scaling within an organization, and more.">
-  <meta property="og:image" content="https://www.polymer-project.org/summit/images/badge-2016-banner.png">
+  <meta property="og:description" content="Join us for two days of talks, codelabs, and breakout sessions from the Polymer team, Googlers, and major companies using Polymer and Web Components.">
+  <meta property="og:image" content="/images/banners/banner.png">
   <meta name="theme-color" content="#2e9be6">
 
   <link rel="manifest" href="/manifest.json">
@@ -102,12 +102,24 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     header,
     footer {
       padding-bottom: calc(var(--section-padding) + var(--bg-pattern-height));
-      text-align: center;
       background: url(/images/backgrounds/header-bg.png) center bottom / auto var(--bg-pattern-height) repeat-x;
     }
 
-    header img {
-      height: 240px;
+    .responsive-logo {
+      width: 210px;
+      margin: var(--section-padding) auto;
+    }
+
+    .responsive-logo .logo {
+      width: 150px;
+      height: 150px;
+      padding: 10px 30px;
+      background: #fff;
+    }
+
+    .responsive-logo .text {
+      width: 210px;
+      height: 54px;
     }
 
     .welcome {
@@ -161,7 +173,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     footer {
       background-color: var(--grey-theme-color);
-      background-image: url(/images/backgrounds/footer-bg.png)
+      background-image: url(/images/backgrounds/footer-bg.png);
+      text-align: center;
     }
 
     footer img {
@@ -186,8 +199,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         --bg-pattern-height: 120px;
       }
 
-      header img {
-        height: 280px;
+      .responsive-logo {
+        width: auto;
+        text-align: center;
+      }
+
+      .responsive-logo .logo {
+        width: auto;
+        height: 100px;
+        padding: 5px 20px;
+      }
+
+      .responsive-logo .text {
+        width: auto;
+        height: 110px;
+        margin-left: 20px;
       }
 
       .row {
@@ -222,51 +248,74 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </template> -->
     <!-- <template is="dom-if" if="[[!hasLivestream]]"> -->
     <header>
-      <img src="/images/logos/header-logo.png" alt="Polymer Summit Copenhagen 2017 August 22-23">
+      <div class="responsive-logo">
+        <img src="/images/logos/p-logo-512.png" class="logo" alt="Polymer Logo">
+        <img src="/images/logos/header-logo-text.png" class="text" alt="Polymer Summit Copenhagen 2017">
+      </div>
     </header>
     <section class="grey">
       <p class="welcome">
-        Join us for two days of talks, codelabs, and breakout sessions from the Polymer team, Googlers, major companies using Polymer and Web Components.
+        Join us for two days of talks, codelabs, and breakout sessions from the Polymer team, Googlers, and major companies using Polymer and Web Components.
       </p>
     </section>
     <a href="https://www.google.com/maps/place/Lokomotivv%C3%A6rkstedet/@55.660099,12.5468403,17z/data=!3m1!4b1!4m5!3m4!1s0x43dc2ab7327d08ab:0xd2fa8a17076784da!8m2!3d55.660096!4d12.549029" target="_blank" rel="noopener" data-outbound class="venue-bg" aria-label="Event map"></a>
 
     <div class="row">
       <section class="white">
-        <h3>Copenhagen.</h3>
-        <p>TODO: Lokomotivværkstedet is a great place full of arts and culture from Denmark. A super popular place for international events and conferences.</p>
+        <h3>Schedule</h3>
+        <p>We are planning a full schedule of technical talks throughout both days, as well as an onsite after party in the evening of the first day.  Onsite attendees will also have unprecedented access to Google engineering teams during the event.</p>
       </section>
       <section class="blue">
-        <h3>Getting There.</h3>
+        <h3>When and Where</h3>
         <div class="direction">
-          <a href="https://www.google.com/maps/place/Lokomotivv%C3%A6rkstedet/@55.660099,12.5468403,17z/data=!3m1!4b1!4m5!3m4!1s0x43dc2ab7327d08ab:0xd2fa8a17076784da!8m2!3d55.660096!4d12.549029" target="_blank" rel="noopener" data-outbound>Lokomotivværkstedet</a>
+          22 August 8:00 – 23 August 18:00
           <br>
-          Otto Busses Vej 5A, 2450 København SV, Denmark
+          <a href="https://www.google.com/maps/place/Lokomotivv%C3%A6rkstedet/@55.660099,12.5468403,17z/data=!3m1!4b1!4m5!3m4!1s0x43dc2ab7327d08ab:0xd2fa8a17076784da!8m2!3d55.660096!4d12.549029" target="_blank" rel="noopener" data-outbound>Lokomotiv værkstedet, Copenhagen, DK</a>
+          <br>
+          Otto Busses Vej 5A, Building OBV037, 2450 Copenhagen SV
         </div>
-        <div>BY OVERGROUND</div>
-        <div class="direction">Shadwell DLR & Overground, Wapping Overground
-          <br><span style="font-style: italic;">Staff will be at the station to guide you to the event.</span></div>
-        <div>BY TUBE</div>
-        <div class="direction">Tower Hill Tube</div>
-        <div>BY CAR</div>
-        <div class="direction">There will be <a href="https://tfl.gov.uk/status-updates/major-works-and-events/tower-bridge-closure">extensive road work on Tower Bridge</a> during the event, which may affect your journey to Tobacco Dock.
-          <br>Limited parking will be available opposite Tobacco Dock, which we recommend <a href="https://www.parkjockey.com/search/Tobacco%20Dock/Dock%2C%20Tobacco%20Quay%2C%2C%20Wapping%20Ln%2C%20London%20E1W%202SF%2C%20United%20Kingdom/51.507959/-0.058841/201605251400/201605251700">booking in advance.</a></div>
+      </section>
+    </div>
+    <div class="row">
+      <section class="pink">
+        <h3>Accommodations</h3>
+        <p>While there are no official accommodations affiliated with Polymer Summit, here are some of the hotels in the area:</p>
+        <p><a href="https://www.scandichotels.dk/hoteller/danmark/kobenhavn/scandic-sydhavnen" target="_blank" rel="noopener" data-outbound>Scandic Sydhavnen, Copenhagen</a><br>Address: Sydhavns Plads 15, Copenhagen, 2450, Denmark<br>Distance to venue: 0.8 km</p>
+        <p><a href="https://www.copenhagenisland.dk/" target="_blank" rel="noopener" data-outbound>Copenhagen Island Hotel, Copenhagen</a><br>Address: Kalvebod Brygge 53, Copenhagen, 1560, Denmark<br>Distance to venue: 1 km</p>
+        <p><a href="https://www.tivolihotel.dk/" target="_blank" rel="noopener" data-outbound>Tivoli Hotel, Copenhagen</a><br>Address: Arni Magnussons Gade 2, Copenhagen, 1577, Denmark<br>Distance to venue: 1.3 km</p>
+      </section>
+      <section class="white">
+        <h3>Getting There</h3>
+
+        <h4>Parking</h4>
+        <p>There will be limited car parking available onsite. We encourage visitors to take public transportation to the venue.</p>
+
+        <h4>Mainline Rail</h4>
+        <p>The nearest main train S-station is Dybbølsbro and is an 8 minute walk / 4 minute bike ride to the venue.</p>
+
+        <p>Travelling by bus, train, or the metro? Plan your journey ahead through the <a href="http://www.rejseplanen.dk/bin/query.exe/en" target="_blank" rel="noopener" data-outbound>Rejseplanen</a> website/app.</p>
+
+        <h4>Airports</h4>
+        <p>Copenhagen airport is a short 15 minute drive away from the venue.</p>
+
+        <h4>Taxis</h4>
+        <p>There are no taxi ranks located at the venue, but these can be booked via their <a href="http://www.taxa.dk/en/#" target="_blank" rel="noopener" data-outbound>website</a>, app, or by calling them on +45 35 35 35 35.</p>
       </section>
     </div>
 
     <h2>Events &amp; Amenities.</h2>
     <div class="row">
-      <section class="pink">
-        <h3>After Hours</h3>
-        <p>Attendees are invited to an after party on Monday, October 17th from 6-10pm.</p>
-        <h3>Child Care</h3>
-        <p>We will offer child care reimbursement to attendees during Polymer Summit. Children aged 3 months to 10 years are eligible. Please note that we have limited availability and may not be able to accommodate all requests.</p>
-      </section>
       <section class="white">
+        <h3>After Hours</h3>
+        <p>Attendees are invited to an after party at the end of the first day, on 22 August from 18:00-22:00.</p>
+        <h3>Childcare</h3>
+        <p>We're pleased to offer child care assistance for Polymer Summit 2017 attendees. Please indicate your interest on the registration form or email us at <a href="mailto:polymer-dev-summit@google.com">polymer-dev-summit@google.com</a>.</p>
+      </section>
+      <section class="blue">
         <h3>Prayer Room &amp; Mother's Room</h3>
-        <p>There will be a mother’s and prayer room open on Monday, 17 October from 8:00-22:00 and Tuesday, 18 October from 8:00-18:00. Sign up sheets will be available in front of the room and usage is first come, first served. Please see the registration desk for more information.</p>
+        <p>We will have a prayer room and mother’s room on site at the event.</p>
         <h3>Accessibility Accommodations</h3>
-        <p>If you have any accessibility accommodation needs, please email polymer-dev-summit@googlegroups.com or let the staff know when you check in. We will provide live captioning services in the general sessions.</p>
+        <p>If you have any accessibility accommodation needs, please email <a href="mailto:polymer-dev-summit@google.com">polymer-dev-summit@google.com</a>.  The sessions on the main stage will be live captioned.</p>
       </section>
     </div>
 
@@ -275,7 +324,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <div class="row social">
         <div>
           <h3>Can’t make it this year?</h3>
-          <p>Streaming video, Polymer Code labs, and our social media community are a few alternatives for staying connected if you’re unable to attend.</p>
+          <p>All sessions will be livestreamed and recorded. <a href="https://services.google.com/fb/forms/polymer2017/" target="_blank" rel="noopener" data-outbound>Sign up to receive updates.</a></p>
         </div>
         <div>
           <div class="row">
@@ -295,13 +344,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             </a>
           </div>
           <div class="row">
-            <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICdISJclfQhj2S8QZGjXV8J" target="_blank" rel="noopener" data-outbound class="button pink">
-              Watch the Polymer Summit 2015 Videos
+            <a href="https://www.youtube.com/playlist?list=PLNYkxOF6rcICc687SxHQRuo9TVNOJelSZ" target="_blank" rel="noopener" data-outbound class="button pink">
+              Watch the Polymer Summit 2016 Videos
             </a>
           </div>
           <div class="row">
-            <a href="https://services.google.com/fb/forms/pol2016/" target="_blank" rel="noopener" data-outbound class="button pink">
-              Get updates about the 2016 summit and livestream
+            <a href="https://bitly.com/polymerslack" target="_blank" rel="noopener" data-outbound class="button pink">
+              Join the conversation on the Polymer Slack channel
             </a>
         </div>
       </div>
