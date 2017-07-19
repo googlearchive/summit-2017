@@ -1,4 +1,4 @@
-self.addEventListener('push', function(event) {
+self.addEventListener('push', (event) => {
   if (event.data) {
     const data = event.data.json();
     if (data.type === 'notification') {
@@ -7,8 +7,19 @@ self.addEventListener('push', function(event) {
   }
 });
 
-self.addEventListener('notificationclick', function(event) {
-  if (event.notification.data && event.notification.data.url) {
-    clients.openWindow(event.notification.data.url);
-  }
+self.addEventListener('notificationclick', (event) => {
+  const data = event.notification.data;
+  clients.openWindow(data && data.url || 'https://summit.polymer-project.org');
+});
+
+self.addEventListener('pushsubscriptionchange', (event) => {  
+  event.waitUntil(
+    self.registration.pushManager.subscribe(event.oldSubscription.options)
+    .then((subscription) => {
+      return fetch('https://polymer-summit-2017.firebaseio.com/subscriptions.json', {
+        method: 'POST',
+        body: JSON.stringify(subscription)
+      });
+    })
+  );  
 });
