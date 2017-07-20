@@ -380,13 +380,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <!--
     Google Analytics code. Defines the global `ga` variable which will use throughout the app.
     This is the async tracking snippet (https://developers.google.com/analytics/devguides/collection/analyticsjs/#alternative_async_tracking_snippet).
-    Pageviews and outbound link click events are sent by the <polymer-summit> element
+    Subsequent pageviews and outbound link click events are sent by the <polymer-summit> element
     (which handles routing). We also include a noscript fallback so we can track users with no
     JS (thought it's not completely reliable since we can't generate a unique cid per user).
   -->
   <script>
     window.ga = function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', 'UA-39334307-21', 'auto');
+    ga('send', 'pageview');
   </script>
   <script src='https://www.google-analytics.com/analytics.js' async></script>
   <noscript>

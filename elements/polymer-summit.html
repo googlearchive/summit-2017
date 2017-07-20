@@ -251,7 +251,11 @@
         ga('send', 'timing', 'shell element', 'ready', Math.round(performance.now()));
       }
 
-      _pathChanged(path) {
+      _pathChanged(path, oldPath) {
+        if (!oldPath) {
+          return;
+        }
+
         this.$.drawer.close();
 
         // Google Analytics - see https://developers.google.com/analytics/devguides/collection/analyticsjs/single-page-applications
