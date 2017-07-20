@@ -3,6 +3,10 @@
   "private": true,
   "dependencies": {
     "app-layout": "class",
-    "polymer": "2"
+    "polymer": "2",
+    "webcomponentsjs": "1.0.1"
+  },
+  "resolutions": {
+    "webcomponentsjs": "1.0.1"
   }
 }
