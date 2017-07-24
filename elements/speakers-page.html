@@ -91,11 +91,11 @@
       }
 
       _gplusUrl(name) {
-        return 'https://plus.google.com/' + name;
+        return name ? 'https://plus.google.com/' + name : null;
       }
 
       _twitterUrl(name) {
-        return 'https://twitter.com/' + name;
+        return name ? 'https://twitter.com/' + name : null;
       }
 
     }
