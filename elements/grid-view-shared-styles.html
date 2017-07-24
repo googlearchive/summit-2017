@@ -37,7 +37,7 @@
         background: #e4e4e4;
       }
 
-      .card:nth-child(even) {
+      .card:nth-of-type(2n) {
         background: #fff;
       }
 
@@ -53,7 +53,7 @@
         color: #147bcc;
       }
 
-      .card .toggle-icon {
+      collapsible-content .toggle-icon {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -63,18 +63,18 @@
         cursor: pointer;
       }
 
-      .card.opened .toggle-icon {
+      collapsible-content.opened .toggle-icon {
         transform: rotate(180deg);
       }
 
-      .card .details {
+      collapsible-content .details {
         border-top: 1px solid rgb(250, 110, 156);
         margin-top: var(--card-padding);
         padding-top: var(--card-padding);
         display: none;
       }
 
-      .card.opened .details {
+      collapsible-content.opened .details {
         display: block;
       }
 
@@ -108,6 +108,20 @@
       @media (min-width: 1500px) {
         .card {
           width: 20%;
+        }
+      }
+
+      @media (min-width: 600px) and (max-width: 899px), (min-width: 1200px) and (max-width: 1499px) {
+        .card:nth-of-type(2n) {
+          background: #e4e4e4;
+        }
+
+        .card:nth-of-type(3n) {
+          background: #fff;
+        }
+
+        .card:nth-of-type(3n+1) {
+          background: #cfcfcf;
         }
       }
     </style>

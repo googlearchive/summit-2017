@@ -43,29 +43,31 @@
     <div class="grid">
       <dom-repeat items="[[data]]">
         <template>
-          <collapsible-content class="card">
-            <div class="photo-wrap">
-              <img class="photo" src="[[item.photo]]" aria-hidden="true">
-            </div>
-
-            <div class="summary">
-              <h3>[[item.name]]</h3>
-              <h4>[[item.title]]</h4>
-              <svg class="toggle-icon" viewBox="0 0 24 24"><g><path d="M7 10l5 5 5-5z"></path></g></svg>
-            </div>
-
-            <div class="details">
-              <p class="bio">[[item.bio]]</p>
-              <div class="bottom-tools">
-                <a href$="[[_gplusUrl(item.gplus)]]" target="_blank" rel="noopener" data-outbound aria-label="Follow on G Plus">
-                  <svg class="social-icon" viewBox="0 0 24 24"><g><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M23 11h-2V9h-2v2h-2v2h2v2h2v-2h2zM8 11v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42S5.61 7.58 8 7.58c1.36 0 2.27.58 2.79 1.08l1.9-1.83C11.47 5.69 9.89 5 8 5c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H8z"></path><path fill="none" d="M1 5h14v14H1z"></path></g></svg>
-                </a>
-                <a href$="[[_twitterUrl(item.twitter)]]" target="_blank" rel="noopener" data-outbound aria-label="Follow on Twitter">
-                  <svg class="social-icon" viewBox="0 0 24 24"><g><path d="M20 2h-16c-1.1 0-1.99.9-1.99 2l-.01 16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-16c0-1.1-.9-2-2-2zm-2.29 7.33c-.06 4.62-3.02 7.78-7.42 7.98-1.82.08-3.14-.5-4.28-1.23 1.34.21 3.01-.32 3.9-1.09-1.32-.13-2.1-.8-2.46-1.88.38.07.78.05 1.14-.03-1.19-.4-2.04-1.13-2.08-2.67.33.15.68.29 1.14.32-.9-.5-1.55-2.35-.8-3.57 1.32 1.45 2.91 2.63 5.52 2.79-.65-2.8 3.06-4.32 4.61-2.44.66-.13 1.19-.38 1.7-.65-.21.65-.62 1.1-1.12 1.47.54-.07 1.03-.21 1.44-.41-.25.53-.81 1.01-1.29 1.41z"></path></g></svg>
-                </a>
+          <div class="card">
+            <collapsible-content>
+              <div class="photo-wrap">
+                <img class="photo" src="[[item.photo]]" aria-hidden="true">
               </div>
-            </div>
-          </collapsible-content>
+
+              <div class="summary">
+                <h3>[[item.name]]</h3>
+                <h4>[[item.title]]</h4>
+                <svg class="toggle-icon" viewBox="0 0 24 24"><g><path d="M7 10l5 5 5-5z"></path></g></svg>
+              </div>
+
+              <div class="details">
+                <p class="bio">[[item.bio]]</p>
+                <div class="bottom-tools">
+                  <a href$="[[_gplusUrl(item.gplus)]]" target="_blank" rel="noopener" data-outbound aria-label="Follow on G Plus">
+                    <svg class="social-icon" viewBox="0 0 24 24"><g><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M23 11h-2V9h-2v2h-2v2h2v2h2v-2h2zM8 11v2.4h3.97c-.16 1.03-1.2 3.02-3.97 3.02-2.39 0-4.34-1.98-4.34-4.42S5.61 7.58 8 7.58c1.36 0 2.27.58 2.79 1.08l1.9-1.83C11.47 5.69 9.89 5 8 5c-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.72-2.84 6.72-6.84 0-.46-.05-.81-.11-1.16H8z"></path><path fill="none" d="M1 5h14v14H1z"></path></g></svg>
+                  </a>
+                  <a href$="[[_twitterUrl(item.twitter)]]" target="_blank" rel="noopener" data-outbound aria-label="Follow on Twitter">
+                    <svg class="social-icon" viewBox="0 0 24 24"><g><path d="M20 2h-16c-1.1 0-1.99.9-1.99 2l-.01 16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-16c0-1.1-.9-2-2-2zm-2.29 7.33c-.06 4.62-3.02 7.78-7.42 7.98-1.82.08-3.14-.5-4.28-1.23 1.34.21 3.01-.32 3.9-1.09-1.32-.13-2.1-.8-2.46-1.88.38.07.78.05 1.14-.03-1.19-.4-2.04-1.13-2.08-2.67.33.15.68.29 1.14.32-.9-.5-1.55-2.35-.8-3.57 1.32 1.45 2.91 2.63 5.52 2.79-.65-2.8 3.06-4.32 4.61-2.44.66-.13 1.19-.38 1.7-.65-.21.65-.62 1.1-1.12 1.47.54-.07 1.03-.21 1.44-.41-.25.53-.81 1.01-1.29 1.41z"></path></g></svg>
+                  </a>
+                </div>
+              </div>
+            </collapsible-content>
+          </div>
         </template>
       </dom-repeat>
     </div>

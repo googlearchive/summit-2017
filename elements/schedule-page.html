@@ -39,18 +39,20 @@
 
           <dom-repeat items="[[item.sessions]]">
             <template>
-              <collapsible-content class="card">
-                <div class="summary">
-                  <h3>[[item.name]]</h3>
-                  <h4>[[item.speaker]]</h4>
-                  <div class="time">[[item.time]]</div>
-                  <div class="location">[[item.location]]</div>
-                  <a href$="[[item.video]]" class="video">WATCH THE VIDEO</a>
-                  <svg class="toggle-icon" viewBox="0 0 24 24"><g><path d="M7 10l5 5 5-5z"></path></g></svg>
-                </div>
+              <div class="card">
+                <collapsible-content>
+                  <div class="summary">
+                    <h3>[[item.name]]</h3>
+                    <h4>[[item.speaker]]</h4>
+                    <div class="time">[[item.time]]</div>
+                    <div class="location">[[item.location]]</div>
+                    <a href$="[[item.video]]" class="video">WATCH THE VIDEO</a>
+                    <svg class="toggle-icon" viewBox="0 0 24 24"><g><path d="M7 10l5 5 5-5z"></path></g></svg>
+                  </div>
 
-                <p class="details">[[item.desc]]</p>
-              </collapsible-content>
+                  <p class="details">[[item.desc]]</p>
+                </collapsible-content>
+              </div>
             </template>
           </dom-repeat>
 
