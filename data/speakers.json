@@ -75,7 +75,7 @@
     "name": "Josh Trout",
     "title": "Principal Developer",
     "twitter": "filet0fish",
-    "gplus": "u/0/+JoshTrout",
+    "gplus": "+JoshTrout",
     "photo": "/images/speakers/josh_trout.jpg",
     "bio": "Josh has been working at Gannett for over 3 years and is a principal developer on the web team. He is currently architecting the next generation framework for Gannett's 100+ newspaper sites."
   },
@@ -108,7 +108,7 @@
     "title": "Archilogic",
     "twitter": "",
     "gplus": "",
-    "photo": "",
+    "photo": "/images/speakers/martin_splitt.jpg",
     "bio": "Martin is open source contributor and web evangelist by heart from Zurich with a decade experience from the trenches of software engineering in multiple fields. He works as a software engineer at Archilogic in front- and backend. He devotes his time to moving the web forward, fixing problems, building applications and systems and breaking things for fun & profit. Martin believes in the web platform and is working with bleeding edge technologies that will allow the web to prosper."
   },
   {
@@ -116,7 +116,7 @@
     "title": "Jack Henry and Associates",
     "twitter": "",
     "gplus": "",
-    "photo": "",
+    "photo": "/images/speakers/chad_killingsworth.jpg",
     "bio": "Chad is a Software Engineer for Jack Henry & Associates where he builds modern online banking experiences for U.S. banks using Polymer. Chad contributes to many open source projects including Google’s Closure Compiler and generally advocates for strongly typed and highly performant JavaScript to anyone within earshot."
   },
   {
@@ -124,7 +124,7 @@
     "title": "ETH Zurich (PhD Student)",
     "twitter": "",
     "gplus": "",
-    "photo": "",
+    "photo": "/images/speakers/maria_husmann.jpg",
     "bio": "Maria is a PHD student at ETH Zurich working at the intersection of human computer interaction and web engineering. She is researching how developers can build applications that distribute their UI across multiple devices. Previously she worked as a software engineer on traffic control projects. This autumn, Maria will start a part-time position as a lecturer in the Digital Ideation programme at the Lucerne University of Applied Sciences and Arts."
   },
   {
@@ -132,7 +132,7 @@
     "title": "",
     "twitter": "kunal",
     "gplus": "",
-    "photo": "",
+    "photo": "/images/speakers/kunal_kundaje.jpg",
     "bio": "Kunal Kundaje is a Senior Software Engineer at Netflix on the Cloud and Platform team, where he works on interesting problems at the unique intersection of large-scale distributed systems in the cloud and front-end web development. Prior to Netflix, Kunal traveled around the U.S. at ThoughtWorks, working with clients in the retail, media, healthcare, and airline industries on a variety of responsive web and mobile consumer apps."
   },
   {
@@ -140,7 +140,7 @@
     "title": "Google",
     "twitter": "",
     "gplus": "",
-    "photo": "",
+    "photo": "/images/speakers/ziling_zhao.jpg",
     "bio": "Ziling Zhao is a software engineer at Google working on the YouTube web architecture team. Before this team, he worked on the YouTube main desktop website and devops/site reliability at Google on a small photo editing team called Picnik. At Youtube, he has worked on the search frontend, the desktop/mobile website, and was a technical lead on latency. His current focus is on the shared web infrastructure of YouTube Web Applications."
   },
   {
@@ -148,7 +148,7 @@
     "title": "Google",
     "twitter": "",
     "gplus": "",
-    "photo": "",
+    "photo": "/images/speakers/mikhail_sychev.jpg",
     "bio": "Mikhail Sychev is a senior software engineer at Google. For the last 5 years he has been part of the YouTube Desktop team, helping to build YouTube's next generation web experience. Mikhail is a huge advocate of the Polymer web framework and an engineer behind WebP thumbnails at YouTube and YouTube on Cardboard. Prior to Google, Mikhail worked as a software engineer at Apartama. Mikhail earned his master’s degree from MIIT at Moscow, Russia."
   },
   {
@@ -164,7 +164,7 @@
     "title": "Google",
     "twitter": "kosamari",
     "gplus": "",
-    "photo": "",
+    "photo": "/images/speakers/mariko_kosaka.jpg",
     "bio": "Mariko is a developer advocate at Google working on the open web.  If she is not in front of a laptop, she is probably drawing or knitting."
   },
   {
@@ -172,7 +172,7 @@
     "title": "Google",
     "twitter": "samdotli",
     "gplus": "",
-    "photo": "",
+    "photo": "/images/speakers/sam_li.jpg",
     "bio": "Chrome engineer on the Polymer team. Recently moved from Sydney to San Francisco."
   }
 ]
