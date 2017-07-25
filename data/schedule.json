@@ -1,198 +1,89 @@
 [
   {
-    "date": "Tuesday, August 22",
+    "date": "Planned Talks",
     "sessions":[
       {
-        "name": "Breakfast/Registration",
-        "time": "Tuesday 9-10am",
-        "desc": "Pick up your badge, goodies, and enjoy breakfast. You must have a government-issued photo ID to receive a badge and check in to the event."
-      },
-      {
-        "name": "Opening Keynote",
-        "time":  "Tuesday 10am",
-        "desc": ""
-      },
-      {
-        "speakerPage": true,
         "name": "Polymer @ YouTube",
-        "time": "Tuesday 10:30am",
+        "time": "",
         "speaker": "Ziling Zhao & Mikhail Sychev",
         "desc": "YouTube is migrating to web components and we've chosen Polymer as our vehicle. With a site as large as ours, we've got some unique constraints and scalability challenges that we've taken on as part of this journey. The YouTube desktop site is comprised of over 400 web components, developed by dozens of teams. Come hear about how we build components, our tools, processes, and challenges."
       },
       {
-        "name": "Break",
-        "time": "Tuesday 11am"
-      },
-      {
-        "speakerPage": true,
-        "name": "Polymer 2.0 for Reusable Web Components",
-        "time": "Tuesday 11:30am",
+        "name": "Evolving the Next Generation of Polymer Elements",
+        "time": "",
         "speaker": "Steve Orvell",
-        "desc": ""
+        "desc": "Now that web components are everywhere, what’s next for a library that helps you write them? How do we make elements that are “fast by default”, that don’t incur any unneeded cost, and that are easy to maintain and create? Using Polymer 2.0 and ES modules as a base, we’ll show you some of the awesome tricks the team has been cooking to help you make better elements."
       },
       {
-        "name": "Apps in Web Components",
-        "time": "Tuesday 12pm",
-        "speaker": "Kevin Schaaf",
-        "desc": ""
-      },
-      {
-        "name": "Lunch",
-        "time": "Tuesday 12:30pm"
-      },
-      {
-        "speakerPage": true,
-        "name": "Crafters and Assemblers",
-        "time": "Tuesday 1:30pm",
-        "speaker": "Alexander Zogheb",
-        "desc": ""
-      },
-      {
-        "speakerPage": true,
         "name": "Polymer + Webpack: Bringing Web Components to a Framework Near You",
-        "time": "Tuesday 2pm",
+        "time": "",
         "speaker": "Chad Killingsworth",
         "desc": "Introducing shared web components into disparate projects is a development dream, but when the build systems are different you spend more time creating helper scripts than writing shippable code. Using WebPack you can easily add Polymer components to any project and leverage a vast ecosystem of plugins to tame even the gnarliest of builds. As an added bonus your Polymer components can import content from node_modules without breaking a sweat."
       },
       {
-        "speakerPage": true,
         "name": "Rebooting the Cloud Platform UX @ Netflix with Polymer",
-        "time": "Tuesday 2:30pm",
+        "time": "",
         "speaker": "Kunal Kundaje",
         "desc": "Find out how Netflix uses Polymer and Web Components to rapidly build performant, intuitive monitoring tools, visualizations, and self-service apps that our engineers use to operate our large-scale distributed systems in the cloud everyday. In this talk, we'll explore examples of the varied spectrum of apps we've built using Polymer, learn how we use a combination of open-source and internal component libraries, share our experiments with tackling state management in large apps, and look ahead at our migration path to Polymer 2.0."
       },
       {
-        "name": "Break",
-        "time": "Tuesday 3pm"
-      },
-      {
-        "speakerPage": true,
         "name": "Design systems & component systems",
-        "time": "Tuesday 4pm",
-        "speaker": "Jesiah McCann",
-        "desc": ""
+        "time": "",
+        "speaker": "Jesiah McCann, Josh Trout, Marianne Epstein",
+        "desc": "Web Components provide new ways for teams to build cool things, but it can be a challenge to get all those cool things to play together nicely. How do you organize and document a coherent ecosystem of modules that truly work well together, and how do you build an effective team to build them? The USA TODAY NETWORK design-dev team will share some of their lessons-learned from the past year spent overhauling their web framework."
       },
       {
-        "speakerPage": true,
         "name": "UI's across multiple devices",
-        "time": "Tuesday 4:30pm",
+        "time": "",
         "speaker": "Maria Husmann",
         "desc": "We have more and more devices, but we still mostly use them in isolation. In this talk, you will learn how we use Polymer in research and education to experiment with applications that combine multiple devices. We will introduce our cross-device library that was built with Polymer and demonstrate how it can be used to create a simple webcam viewer for a large screen and phones. Students at ETH Zurich have used the library for various projects (including Bachelor and Master theses) and had quickly been able to create applications with the Web Components it provides."
       },
       {
-        "speakerPage": true,
-        "name": "WebVR - A-Frame Clone with 2.0",
-        "time": "Tuesday 4:45pm",
+        "name": "Web Components for VR",
+        "time": "",
         "speaker": "Martin Splitt",
         "desc": "In this session we'll explore building a semantic component system to create declarative 3D web content. We will see what goes into WebGL and how we can lay out the architecture to allow authors to create 3D applications from a set of small components. You will learn more about 3D rendering as well as component architecture."
       },
       {
-        "speakerPage": true,
         "name": "Meownica Show",
-        "time": "Tuesday 5pm",
+        "time": "",
         "speaker": "Monica Dinculescu",
-        "desc": "I built some things and I’m going to tell you about it, in a fresh new live episode of the Meownica show, the made-up show where there are no rules and the points don’t matter. Also this is not actually a show, and there will me no live audience interaction."
+        "desc": "I built some things and I’m going to tell you about it, in a fresh new live episode of the Meownica show, the made-up show where there are no rules and the points don’t matter. Also this is not actually a show, and there will be no live audience interaction."
       },
       {
-        "name": "After Party",
-        "time": "Tuesday 6pm",
-        "desc": ""
-      }
-    ]
-  },
-  {
-    "date": "Wednesday, August 23",
-    "sessions":[
-      {
-        "name": "Registration/Breakfast",
-        "time": "Wednesday 9-10am",
-        "desc": "If you didn’t get your badge on Day 1, you can still get your badge and goodies. Breakfast will also be served. You must have a government-issued photo ID to receive a badge and check in to the event."
-      },
-      {
-        "name": "Day Two Opening Remarks",
-        "time": "Wednesday 10am",
-        "speaker": "Ben Galbraith & Dion Almaer",
-        "desc": ""
-      },
-      {
-        "speakerPage": true,
         "name": "What is/Who makes \"the Platform\"",
-        "time": "Wednesday 10:30am",
+        "time": "",
         "speaker": "Mariko Kosaka",
         "desc": "#UseThePlatform, but what even is the platform? and who makes the platform?? Join me in investigating how the web platform standards are made."
       },
       {
-        "name": "Break",
-        "time": "Wednesday 11am",
-        "desc": ""
-      },
-      {
-        "speakerPage": true,
-        "name": "History of Parkour",
-        "time": "Wednesday 11:30am",
-        "speaker": "Alex Russell",
-        "desc": ""
-      },
-      {
-        "speakerPage": true,
         "name": "Interop",
-        "time": "Wednesday 12pm",
+        "time": "",
         "speaker": "Rob Dodson",
         "desc": "If you're a mid to large size company, building your UI in Web Components and sharing it across teams on different stacks sounds like a great plan. In theory things should \"just work,\" but reality often proves otherwise. What do we need to do to make sure our components work well with all of the major frameworks and conversely what do the frameworks need to do to work with our components? This talk explores both sides of the problem and lays out some best practices that both parties can use to ensure seamless interoperability."
       },
       {
-        "name": "Lunch",
-        "time": "Wednesday 12:30pm"
-      },
-      {
-        "speakerPage": true,
-        "name": "SEO / SSR Intro",
-        "time": "Wednesday 1:30pm",
+        "name": "SEO, Social Snippets & SSR",
+        "time": "",
         "speaker": "Gray Norton",
-        "desc": ""
+        "desc": "PWAs help us deliver excellent user experiences. But to reach users, our PWAs also need to cater to a non-human audience: the bots that crawl the web, populating search engines and producing snippets for social media sharing. This talk provides a 30,000-foot view of what it means to make your PWA search- and social-ready in the age of web components, setting the stage for Sam and Trey’s deep-dives."
       },
       {
-        "speakerPage": true,
         "name": "Solving SEO with Headless Chrome",
-        "time": "Wednesday 1:50pm",
+        "time": "",
         "speaker": "Sam Li",
         "desc": "Working with client-based web technologies offers the promise of decoupling models and views. It’s a powerful model which yields a clean developer experience allowing the server to deal with data and interactions and the client UI to simply present and facilitate these interactions. SEO is the big problem these client-based technologies face. Building a headless Chrome service for rendering helps solve SEO & sharing problems while maintaining clean server code."
       },
       {
-        "name": "SSR Web Components",
-        "time": "Wednesday 2:10pm",
-        "speaker": "Trey Shugart",
-        "desc": ""
-      },
-      {
-        "speakerPage": true,
-        "name": "Sam Thorogood's Talk",
-        "time": "Wednesday 2:30pm",
+        "name": "ES6 Modules in the Real World",
+        "time": "",
         "speaker": "Sam Thorogood",
-        "desc": ""
-      },
-      {
-        "name": "Break",
-        "time": "Wednesday 3pm"
-      },
-      {
-        "name": "Using WC in Ionic",
-        "time": "Wednesday 4pm",
-        "speaker": "TBD",
-        "desc": ""
-      },
-      {
-        "speakerPage": true,
-        "name": "Surma & Monica",
-        "time": "Wednesday 4:30pm",
-        "speaker": "Surma & Monica",
-        "desc": ""
-      },
-      {
-        "name": "Panel",
-        "time": "Wednesday 5pm",
-        "desc": "Do you have questions you want to ask the speakers from the previous sessions? Join the speakers in the Ask Polymer Lounge for face to face Q&A time!"
+        "desc": "ES6 Modules are now supported in all major modern browsers. By using the platform and building native, well-supported, modular code, you can benefit from speedier engineering cycles—no compile steps required during development. Sam will detail architectural patterns that enable you to use ES6 Modules for your webapp or experience, regardless of framework—including shipping modern code to modern browsers (fast!) while still compiling down to an older baseline for the long tail."
       }
     ]
+  },
+  {
+    "date": "More talks to be announced",
+    "sessions":[]
   }
 ]

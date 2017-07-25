@@ -1,7 +1,7 @@
 [
   {
     "name": "Monica Dinculescu",
-    "title": "Software Engineer",
+    "title": "Google",
     "twitter": "notwaldorf",
     "gplus": "+MonicaDinculescu514",
     "photo": "/images/speakers/monica_dinculescu.jpg",
@@ -9,7 +9,7 @@
   },
   {
     "name": "Alex Russell",
-    "title": "Software Engineer",
+    "title": "Google",
     "twitter": "slightlylate",
     "gplus": "+AlexRussell",
     "photo": "/images/speakers/alex_russell.jpg",
@@ -17,7 +17,7 @@
   },
   {
     "name": "Rob Dodson",
-    "title": "Developer Advocate",
+    "title": "Google",
     "twitter": "rob_dodson",
     "gplus": "+RobDodson",
     "photo": "/images/speakers/rob_dodson.jpg",
@@ -25,23 +25,31 @@
   },
   {
     "name": "Taylor Savage",
-    "title": "Product Manager",
+    "title": "Google",
     "twitter": "TaylorTheSavage",
     "gplus": "",
     "photo": "/images/speakers/taylor_savage.jpg",
     "bio": "Taylor is a Product Manager on the Google Web Platform Team, focused on Polymer and Progressive Web Apps. Prior to Polymer, Taylor worked launching new features on Google Search. He enjoys cooking, eating, and tinkering with Raspberry Pi's."
   },
   {
+    "name": "Ben Galbraith",
+    "title": "Google",
+    "twitter": "bgalbs",
+    "gplus": "",
+    "photo": "/images/speakers/ben_galbraith.jpg",
+    "bio": "Ben Galbraith is a Director of Product Management for Chrome, focused on the present and future of the web platform. Prior to Google, Ben has alternated between entrepreneurial and executive roles across several industries and has held leadership roles in organizations like Mozilla, Palm during the webOS era, and Walmart Labs. When not at work, he’s trying to get some of his eight kids interested in software development."
+  },
+  {
     "name": "Dion Almaer",
-    "title": "Engineering Director",
+    "title": "Google",
     "twitter": "dalmaer",
     "gplus": "",
     "photo": "/images/speakers/dion_almaer.jpg",
-    "bio": "I love helping developers be successful as that results in happy users. The enjoy watching the constantly evolving experiment that is the Web, and long to see it grow and prosper."
+    "bio": "I love helping developers be successful as that results in happy users. I enjoy watching the constantly evolving experiment that is the Web, and long to see it grow and prosper."
   },
   {
     "name": "Matt McNulty",
-    "title": "Director, Web Platform Client",
+    "title": "Google",
     "twitter": "mattsmcnulty",
     "gplus": "",
     "photo": "/images/speakers/matt_mcnulty.jpg",
@@ -49,7 +57,7 @@
   },
   {
     "name": "Wendy Ginsberg",
-    "title": "Associate Product Manager",
+    "title": "Google",
     "twitter": "wmginsberg",
     "gplus": "103070138385502314647",
     "photo": "/images/speakers/wendy_ginsberg.jpg",
@@ -57,31 +65,39 @@
   },
   {
     "name": "Jesiah McCann",
-    "title": "Web Development Manager",
+    "title": "Gannett",
     "twitter": "jesiahM",
     "gplus": "",
     "photo": "/images/speakers/jesiah_mccann.jpg",
     "bio": "Jesiah manages development of core web products @ Gannett / USA TODAY. He has been with Gannett for 5 years, and is currently leading the development of their emerging web platform. Jesiah is a blacksmith in his spare time, and has a slight obsession with all things coffee."
   },
   {
-    "name": "Gray Norton",
-    "title": "Technical Lead/Manager",
-    "twitter": "graynorton",
-    "gplus": "",
-    "photo": "/images/speakers/gray_norton.jpg",
-    "bio": "Gray is a passionate Web advocate and a Technical Lead / Manager on the Polymer team. Prior to joining Google he led the Enyo framework team at webOS, helping developers build apps for several generations of phones, tablets, TVs and watches. In past lives, he has worked on software tools for creating chatbots, 3D games and pretty pictures. When not at work, Gray enjoys spending time with his family and occasionally singing."
-  },
-  {
     "name": "Josh Trout",
-    "title": "Principal Developer",
+    "title": "Gannett",
     "twitter": "filet0fish",
     "gplus": "+JoshTrout",
     "photo": "/images/speakers/josh_trout.jpg",
     "bio": "Josh has been working at Gannett for over 3 years and is a principal developer on the web team. He is currently architecting the next generation framework for Gannett's 100+ newspaper sites."
   },
   {
+    "name": "Marianne Epstein",
+    "title": "Gannett",
+    "twitter": "",
+    "gplus": "109572581360706603125",
+    "photo": "/images/speakers/marianne_epstein.jpg",
+    "bio": "Marianne Epstein is a Senior UX Architect with Gannett Product, focused on building a flexible, scalable design system to meet the needs of the USA TODAY NETWORK’s readers, journalists, developers and designers. Outside of work (and mostly off of screens) she creates artist books."
+  },
+  {
+    "name": "Gray Norton",
+    "title": "Google",
+    "twitter": "graynorton",
+    "gplus": "",
+    "photo": "/images/speakers/gray_norton.jpg",
+    "bio": "Gray is a passionate Web advocate and a Technical Lead / Manager on the Polymer team. Prior to joining Google he led the Enyo framework team at webOS, helping developers build apps for several generations of phones, tablets, TVs and watches. In past lives, he has worked on software tools for creating chatbots, 3D games and pretty pictures. When not at work, Gray enjoys spending time with his family and occasionally singing."
+  },
+  {
     "name": "Sam Thorogood",
-    "title": "Software Engineer",
+    "title": "Google",
     "twitter": "samthor",
     "gplus": "+SamThorogood",
     "photo": "/images/speakers/sam_thorogood.jpg",
@@ -89,15 +105,23 @@
   },
   {
     "name": "Steve Orvell",
-    "title": "Software Engineer",
+    "title": "Google",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/steve_orvell.jpg",
     "bio": "Steve is an engineer working on the core library of the Polymer project. He works on the foundation code, DOM scoping, and the data system. He's been on the project since the beginning about 4 years ago and has participated in the spec process for Custom Elements and Shadow DOM. Before Polymer, Steve worked on WebOS at HP and Palm. In addition to coding, Steve enjoys running, biking, and traveling."
   },
   {
+    "name": "Kevin Schaaf",
+    "title": "Google",
+    "twitter": "",
+    "gplus": "",
+    "photo": "/images/speakers/kevin_schaaf.jpg",
+    "bio": "Kevin is a software engineer focusing on core features of the Polymer library. Kevin got his start in web development at a Tokyo startup back in the Netscape/IE5 days, and then took a long hiatus from the web while working in embedded electronics. Kevin returned back to the web in full force several years ago after joining Palm to work on the webOS developer platform and later leading the development of LG’s smart TV UI framework before joining the Polymer team at Google."
+  },
+  {
     "name": "Surma",
-    "title": "Developer Programs Engineer",
+    "title": "Google",
     "twitter": "DasSurma",
     "gplus": "",
     "photo": "/images/speakers/surma.jpg",
@@ -129,7 +153,7 @@
   },
   {
     "name": "Kunal Kundaje",
-    "title": "",
+    "title": "Netflix",
     "twitter": "kunal",
     "gplus": "",
     "photo": "/images/speakers/kunal_kundaje.jpg",
@@ -152,14 +176,6 @@
     "bio": "Mikhail Sychev is a senior software engineer at Google. For the last 5 years he has been part of the YouTube Desktop team, helping to build YouTube's next generation web experience. Mikhail is a huge advocate of the Polymer web framework and an engineer behind WebP thumbnails at YouTube and YouTube on Cardboard. Prior to Google, Mikhail worked as a software engineer at Apartama. Mikhail earned his master’s degree from MIIT at Moscow, Russia."
   },
   {
-    "name": "Alexander Zogheb",
-    "title": "EA",
-    "twitter": "",
-    "gplus": "",
-    "photo": "",
-    "bio": ""
-  },
-  {
     "name": "Mariko Kosaka",
     "title": "Google",
     "twitter": "kosamari",
@@ -174,5 +190,13 @@
     "gplus": "",
     "photo": "/images/speakers/sam_li.jpg",
     "bio": "Chrome engineer on the Polymer team. Recently moved from Sydney to San Francisco."
+  },
+  {
+    "name": "Bede Overend",
+    "title": "Simpla",
+    "twitter": "",
+    "gplus": "",
+    "photo": "/images/speakers/bede_overend.jpg",
+    "bio": ""
   }
 ]
