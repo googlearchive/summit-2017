@@ -198,5 +198,13 @@
     "gplus": "",
     "photo": "/images/speakers/bede_overend.jpg",
     "bio": ""
+  },
+  {
+    "name": "Trey Shugart",
+    "title": "Atlassian",
+    "twitter": "",
+    "gplus": "",
+    "photo": "/images/speakers/trey_shugart.jpg",
+    "bio": "Trey is a Principal Engineer on the front-end component library at Atlassian by day and author of SkateJS - and other web component tooling - by night. When he's not behind the computer, he's either hangin with the fam or pretending he's the lead guitarist of a prog rock band."
   }
 ]

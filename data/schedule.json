@@ -75,6 +75,12 @@
         "desc": "Working with client-based web technologies offers the promise of decoupling models and views. It’s a powerful model which yields a clean developer experience allowing the server to deal with data and interactions and the client UI to simply present and facilitate these interactions. SEO is the big problem these client-based technologies face. Building a headless Chrome service for rendering helps solve SEO & sharing problems while maintaining clean server code."
       },
       {
+        "name": "SSR Web Components",
+        "time": "",
+        "speaker": "Trey Shugart",
+        "desc": "SSR - or server-side rendering - has become all the rage in other JavaScript communities and is a criticism of web components as something you cannot do. Trey is here to bust that myth providing an overview of the benefits, the hurdles to overcome, an in-depth look at how it's achievable and the challenges that are faced on the road ahead."
+      },
+      {
         "name": "ES6 Modules in the Real World",
         "time": "",
         "speaker": "Sam Thorogood",
