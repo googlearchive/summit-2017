@@ -79,6 +79,12 @@
         "time": "",
         "speaker": "Sam Thorogood",
         "desc": "ES6 Modules are now supported in all major modern browsers. By using the platform and building native, well-supported, modular code, you can benefit from speedier engineering cycles—no compile steps required during development. Sam will detail architectural patterns that enable you to use ES6 Modules for your webapp or experience, regardless of framework—including shipping modern code to modern browsers (fast!) while still compiling down to an older baseline for the long tail."
+      },
+      {
+        "name": "⚡️Supercharged Live Live Live",
+        "time": "",
+        "speaker": "Surma & Monica Dinculescu",
+        "desc": "Last year’s Polymer Summit was the very first Supercharged Live Live Live stream. It’s only appropriate to do it again this year. Surma and Monica are going to build… something! With, like, Web Components, the newest JavaScript and other bleeding edge technologies. ’Cause what could possibly go wrong?"
       }
     ]
   },
