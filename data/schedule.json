@@ -91,6 +91,12 @@
         "time": "",
         "speaker": "Surma & Monica Dinculescu",
         "desc": "Last year’s Polymer Summit was the very first Supercharged Live Live Live stream. It’s only appropriate to do it again this year. Surma and Monica are going to build… something! With, like, Web Components, the newest JavaScript and other bleeding edge technologies. ’Cause what could possibly go wrong?"
+      },
+      {
+        "name": "Web Components for CMS",
+        "time": "",
+        "speaker": "Bede Overend",
+        "desc": "The classic monolithic CMS isn't keeping up with the modern web. Decoupled and the headless CMSes have emerged and are looking to address these issues - but what about componentized content? Can web components help us make a better content experience? This talk will look at the current state of content management, and how we can utilize web components. We'll look at creating a component to view and edit content, including design considerations, pitfalls, and what a future of content-based components could look like."
       }
     ]
   },
