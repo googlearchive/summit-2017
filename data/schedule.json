@@ -3,6 +3,12 @@
     "date": "Planned Talks",
     "sessions":[
       {
+        "name": "Welcome & Opening Keynote",
+        "time": "",
+        "speaker": "Wendy Ginsberg",
+        "desc": "What have we been working on since the release of Polymer 2.0, and where are we headed next? Wendy will give an overview of what to expect from the Polymer team at the Summit and in the months ahead."
+      },
+      {
         "name": "Polymer @ YouTube",
         "time": "",
         "speaker": "Ziling Zhao & Mikhail Sychev",
@@ -97,6 +103,18 @@
         "time": "",
         "speaker": "Bede Overend",
         "desc": "The classic monolithic CMS isn't keeping up with the modern web. Decoupled and the headless CMSes have emerged and are looking to address these issues - but what about componentized content? Can web components help us make a better content experience? This talk will look at the current state of content management, and how we can utilize web components. We'll look at creating a component to view and edit content, including design considerations, pitfalls, and what a future of content-based components could look like."
+      },
+      {
+        "name": "Building Best-in-Class Apps with Polymer",
+        "time": "",
+        "speaker": "Kevin Schaaf",
+        "desc": "What does it take to build a top-notch PWA with Polymer? Kevin will set a high bar and then show you how to clear it, taking you from project creation through deployment and highlighting key challenges and best practices along the way."
+      },
+      {
+        "name": "Building UI at Enterprise Scale with Web Components",
+        "time": "",
+        "speaker": "Alexander Zogheb",
+        "desc": "EA leverages Web Components and Polymer to power our portfolio-wide Network Design System. Learn about our transformation from building one-off pages and transient sites, to reusable components and engaging experiences."
       }
     ]
   },

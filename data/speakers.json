@@ -61,7 +61,7 @@
     "twitter": "wmginsberg",
     "gplus": "103070138385502314647",
     "photo": "/images/speakers/wendy_ginsberg.jpg",
-    "bio": "Wendy is a Product Manager on the Polymer team based in San Francisco. She spent the past year working on the Google Store, and is currently working with Google's Project Reconnect to help build online communities for youth refugee homes in Germany. Prior to Google, Wendy studied Computer Science at Brown University, where she focused on Data Science and developing introductory courses."
+    "bio": "Wendy is a Product Manager on the Chrome Web Platform team focusing on Polymer. Her hobbies include going on road trips, hardware hacking, and taking her bearded dragon on walks."
   },
   {
     "name": "Jesiah McCann",
@@ -206,5 +206,13 @@
     "gplus": "",
     "photo": "/images/speakers/trey_shugart.jpg",
     "bio": "Trey is a Principal Engineer on the front-end component library at Atlassian by day and author of SkateJS - and other web component tooling - by night. When he's not behind the computer, he's either hangin with the fam or pretending he's the lead guitarist of a prog rock band."
+  },
+  {
+    "name": "Alexander Zogheb",
+    "title": "EA",
+    "twitter": "",
+    "gplus": "",
+    "photo": "/images/speakers/alexander_zogheb.jpg",
+    "bio": "Alexander is the Group Technical Director with the PULSE team at Electronic Arts in Vancouver, Canada.  He is a father, software engineer, and entrepreneur, and is all about online and web to the bone.  Remember Geocities, Tripod and DyanamicDrive.com??  Alexander has been with EA for 8 years and has worked on Web@EA since the early beginnings, as well as Game Services / SaaS.  He was also a Frostbite Game Engine Online Technical Director."
   }
 ]
