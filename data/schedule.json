@@ -51,10 +51,10 @@
         "desc": "In this session we'll explore building a semantic component system to create declarative 3D web content. We will see what goes into WebGL and how we can lay out the architecture to allow authors to create 3D applications from a set of small components. You will learn more about 3D rendering as well as component architecture."
       },
       {
-        "name": "Meownica Show",
+        "name": "What you see is what you deserve: simple visual tools for all!",
         "time": "",
         "speaker": "Monica Dinculescu",
-        "desc": "I built some things and I’m going to tell you about it, in a fresh new live episode of the Meownica show, the made-up show where there are no rules and the points don’t matter. Also this is not actually a show, and there will be no live audience interaction."
+        "desc": "Polymer is great for building libraries of Web Components everyone can use and for defining a unified design system, but there’s more we can do to help those who craft components showcase them and those who assemble them together into something unique get their work done fast and easy. Come hear about the latest visual tools I’ve been working on in the latest Meownica show!"
       },
       {
         "name": "What is/Who makes \"the Platform\"",
