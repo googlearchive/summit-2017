@@ -214,5 +214,21 @@
     "gplus": "",
     "photo": "/images/speakers/alexander_zogheb.jpg",
     "bio": "Alexander is the Group Technical Director with the PULSE team at Electronic Arts in Vancouver, Canada.  He is a father, software engineer, and entrepreneur, and is all about online and web to the bone.  Remember Geocities, Tripod and DyanamicDrive.com??  Alexander has been with EA for 8 years and has worked on Web@EA since the early beginnings, as well as Game Services / SaaS.  He was also a Frostbite Game Engine Online Technical Director."
+  },
+  {
+    "name": "Max Lynch",
+    "title": "Ionic",
+    "twitter": "",
+    "gplus": "",
+    "photo": "/images/speakers/max_lynch.jpg",
+    "bio": "Max is the co-founder and CEO of Ionic, a startup building tools to enable web developers to build top quality mobile and responsive web apps. Max lives in Madison, Wisconsin with his wife and nearly one year old son, and loves soccer and film photography."
+  },
+  {
+    "name": "Adam Bradley",
+    "title": "Ionic",
+    "twitter": "",
+    "gplus": "",
+    "photo": "/images/speakers/adam_bradley.jpg",
+    "bio": "Adam is the co-creator of and lead developer of Ionic. Adam regularly writes and speaks about hybrid and mobile app development with Ionic, Web Components, and AngularJS. He lives in beautiful Madison, Wisconsin, and is a proud dad, husband, veteran, and dog’s best friend."
   }
 ]

@@ -115,6 +115,12 @@
         "time": "",
         "speaker": "Alexander Zogheb",
         "desc": "EA leverages Web Components and Polymer to power our portfolio-wide Network Design System. Learn about our transformation from building one-off pages and transient sites, to reusable components and engaging experiences."
+      },
+      {
+        "name": "Using Web Components in Ionic",
+        "time": "",
+        "speaker": "Max Lynch & Adam Bradley",
+        "desc": "Developers and businesses are struggling to build fast mobile web apps to reach the next billion users. This talk explores the challenges faced and lessons learned as the Ionic Framework team ported over their collection of mobile-first UI components from a traditional frontend framework to standard Web Components, all in pursuit of faster, more accessible mobile web apps. They will also unveil a new OSS project they created in the process that will help other teams get the most out of Web Components."
       }
     ]
   },

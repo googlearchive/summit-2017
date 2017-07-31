@@ -74,6 +74,21 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       color: inherit;
     }
 
+    /* TODO(keanulee): Uncomment these styles when video goes live.
+    .video-container {
+      position: relative;
+      padding-top: 56.25%;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }*/
+
     header,
     section,
     footer {
@@ -244,14 +259,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   </script>
   <polymer-summit>
-    <!-- <template is="dom-if" if="[[hasLivestream]]">
-      <header class="home-header-livestream">
-        <div class="livestream-container">
-          <google-youtube class="livestream" list-type="playlist" list="PLNYkxOF6rcICc687SxHQRuo9TVNOJelSZ" video-id="[[livestreamVideoId]]" fluid=""></google-youtube>
-        </div>
-      </header>
-    </template> -->
-    <!-- <template is="dom-if" if="[[!hasLivestream]]"> -->
+    <!-- <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/VBbejeKHrjg?list=PLNYkxOF6rcICc687SxHQRuo9TVNOJelSZ" allowfullscreen></iframe>
+    </div> -->
     <header>
       <div class="responsive-logo">
         <img src="/images/logos/p-logo.svg" class="logo" alt="Polymer Logo">
