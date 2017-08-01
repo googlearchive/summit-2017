@@ -9,6 +9,10 @@ module.exports = {
       handler: 'fastest'
     },
     {
+      urlPattern: /\/bower_components\/webcomponentsjs\//,
+      handler: 'fastest'
+    },
+    {
       urlPattern: /\/data\//,
       handler: 'networkFirst'
     }

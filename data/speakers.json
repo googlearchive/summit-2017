@@ -1,7 +1,7 @@
 [
   {
     "name": "Monica Dinculescu",
-    "title": "Google",
+    "company": "Google",
     "twitter": "notwaldorf",
     "gplus": "+MonicaDinculescu514",
     "photo": "/images/speakers/monica_dinculescu.jpg",
@@ -9,15 +9,15 @@
   },
   {
     "name": "Alex Russell",
-    "title": "Google",
+    "company": "Google",
     "twitter": "slightlylate",
     "gplus": "+AlexRussell",
     "photo": "/images/speakers/alex_russell.jpg",
-    "bio": "Alex Russell is a Software Engineer on Chrome team where he designs new features for the Web Platform and leads Chrome’s Standards work. His recent projects include Web Components, ES6 features (Classes and Promises), and Service Workers. Previously he helped build Chrome Frame and led the Dojo Toolkit project. Alex plays for Team Web."
+    "bio": "Alex Russell is a Software Engineer on the Chrome team where he designs new features for the Web Platform and leads Chrome's Standards work. He's a member of ECMA TC39 and serves as an elected member of the W3C’s Technical Architecture Group where he works to improve emerging web APIs. His recent projects include Progressive Web Apps, Service Workers, Web Components, and ES6 features including Classes and Promises. Previously he helped build Chrome Frame and led the Dojo Toolkit project. PWAs are his jam."
   },
   {
     "name": "Rob Dodson",
-    "title": "Google",
+    "company": "Google",
     "twitter": "rob_dodson",
     "gplus": "+RobDodson",
     "photo": "/images/speakers/rob_dodson.jpg",
@@ -25,7 +25,7 @@
   },
   {
     "name": "Taylor Savage",
-    "title": "Google",
+    "company": "Google",
     "twitter": "TaylorTheSavage",
     "gplus": "",
     "photo": "/images/speakers/taylor_savage.jpg",
@@ -33,7 +33,7 @@
   },
   {
     "name": "Ben Galbraith",
-    "title": "Google",
+    "company": "Google",
     "twitter": "bgalbs",
     "gplus": "",
     "photo": "/images/speakers/ben_galbraith.jpg",
@@ -41,7 +41,7 @@
   },
   {
     "name": "Dion Almaer",
-    "title": "Google",
+    "company": "Google",
     "twitter": "dalmaer",
     "gplus": "",
     "photo": "/images/speakers/dion_almaer.jpg",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Matt McNulty",
-    "title": "Google",
+    "company": "Google",
     "twitter": "mattsmcnulty",
     "gplus": "",
     "photo": "/images/speakers/matt_mcnulty.jpg",
@@ -57,7 +57,7 @@
   },
   {
     "name": "Wendy Ginsberg",
-    "title": "Google",
+    "company": "Google",
     "twitter": "wmginsberg",
     "gplus": "103070138385502314647",
     "photo": "/images/speakers/wendy_ginsberg.jpg",
@@ -65,7 +65,7 @@
   },
   {
     "name": "Jesiah McCann",
-    "title": "Gannett",
+    "company": "Gannett",
     "twitter": "jesiahM",
     "gplus": "",
     "photo": "/images/speakers/jesiah_mccann.jpg",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Josh Trout",
-    "title": "Gannett",
+    "company": "Gannett",
     "twitter": "filet0fish",
     "gplus": "+JoshTrout",
     "photo": "/images/speakers/josh_trout.jpg",
@@ -81,7 +81,7 @@
   },
   {
     "name": "Marianne Epstein",
-    "title": "Gannett",
+    "company": "Gannett",
     "twitter": "",
     "gplus": "109572581360706603125",
     "photo": "/images/speakers/marianne_epstein.jpg",
@@ -89,7 +89,7 @@
   },
   {
     "name": "Gray Norton",
-    "title": "Google",
+    "company": "Google",
     "twitter": "graynorton",
     "gplus": "",
     "photo": "/images/speakers/gray_norton.jpg",
@@ -97,7 +97,7 @@
   },
   {
     "name": "Sam Thorogood",
-    "title": "Google",
+    "company": "Google",
     "twitter": "samthor",
     "gplus": "+SamThorogood",
     "photo": "/images/speakers/sam_thorogood.jpg",
@@ -105,7 +105,7 @@
   },
   {
     "name": "Steve Orvell",
-    "title": "Google",
+    "company": "Google",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/steve_orvell.jpg",
@@ -113,7 +113,7 @@
   },
   {
     "name": "Kevin Schaaf",
-    "title": "Google",
+    "company": "Google",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/kevin_schaaf.jpg",
@@ -121,7 +121,7 @@
   },
   {
     "name": "Surma",
-    "title": "Google",
+    "company": "Google",
     "twitter": "DasSurma",
     "gplus": "",
     "photo": "/images/speakers/surma.jpg",
@@ -129,7 +129,7 @@
   },
   {
     "name": "Martin Splitt",
-    "title": "Archilogic",
+    "company": "Archilogic",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/martin_splitt.jpg",
@@ -137,7 +137,7 @@
   },
   {
     "name": "Chad Killingsworth",
-    "title": "Jack Henry and Associates",
+    "company": "Jack Henry and Associates",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/chad_killingsworth.jpg",
@@ -145,7 +145,7 @@
   },
   {
     "name": "Maria Husmann",
-    "title": "ETH Zurich (PhD Student)",
+    "company": "ETH Zurich (PhD Student)",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/maria_husmann.jpg",
@@ -153,7 +153,7 @@
   },
   {
     "name": "Kunal Kundaje",
-    "title": "Netflix",
+    "company": "Netflix",
     "twitter": "kunal",
     "gplus": "",
     "photo": "/images/speakers/kunal_kundaje.jpg",
@@ -161,7 +161,7 @@
   },
   {
     "name": "Ziling Zhao",
-    "title": "Google",
+    "company": "Google",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/ziling_zhao.jpg",
@@ -169,15 +169,15 @@
   },
   {
     "name": "Mikhail Sychev",
-    "title": "Google",
-    "twitter": "",
+    "company": "Google",
+    "twitter": "MikeAthene",
     "gplus": "",
     "photo": "/images/speakers/mikhail_sychev.jpg",
     "bio": "Mikhail Sychev is a senior software engineer at Google. For the last 5 years he has been part of the YouTube Desktop team, helping to build YouTube's next generation web experience. Mikhail is a huge advocate of the Polymer web framework and an engineer behind WebP thumbnails at YouTube and YouTube on Cardboard. Prior to Google, Mikhail worked as a software engineer at Apartama. Mikhail earned his master’s degree from MIIT at Moscow, Russia."
   },
   {
     "name": "Mariko Kosaka",
-    "title": "Google",
+    "company": "Google",
     "twitter": "kosamari",
     "gplus": "",
     "photo": "/images/speakers/mariko_kosaka.jpg",
@@ -185,7 +185,7 @@
   },
   {
     "name": "Sam Li",
-    "title": "Google",
+    "company": "Google",
     "twitter": "samdotli",
     "gplus": "",
     "photo": "/images/speakers/sam_li.jpg",
@@ -193,7 +193,7 @@
   },
   {
     "name": "Bede Overend",
-    "title": "Simpla",
+    "company": "Simpla",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/bede_overend.jpg",
@@ -201,7 +201,7 @@
   },
   {
     "name": "Trey Shugart",
-    "title": "Atlassian",
+    "company": "Atlassian",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/trey_shugart.jpg",
@@ -209,7 +209,7 @@
   },
   {
     "name": "Alexander Zogheb",
-    "title": "EA",
+    "company": "EA",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/alexander_zogheb.jpg",
@@ -217,7 +217,7 @@
   },
   {
     "name": "Max Lynch",
-    "title": "Ionic",
+    "company": "Ionic",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/max_lynch.jpg",
@@ -225,10 +225,26 @@
   },
   {
     "name": "Adam Bradley",
-    "title": "Ionic",
+    "company": "Ionic",
     "twitter": "",
     "gplus": "",
     "photo": "/images/speakers/adam_bradley.jpg",
     "bio": "Adam is the co-creator of and lead developer of Ionic. Adam regularly writes and speaks about hybrid and mobile app development with Ionic, Web Components, and AngularJS. He lives in beautiful Madison, Wisconsin, and is a proud dad, husband, veteran, and dog’s best friend."
+  },
+  {
+    "name": "Justin Fagnani",
+    "company": "Google",
+    "twitter": "justinfagnani",
+    "gplus": "+JustinFagnani",
+    "photo": "/images/speakers/justin_fagnani.jpg",
+    "bio": "Justin is a software engineer at Google, and technical lead of the Polymer Tools team. When not building tooling for Web Components, he moonlights as a template system designer, programming language enthusiast and musician. He's been working in developer tools at Google for over 8 years, previously with Dart, and as a founder of the App Maker project."
+  },
+  {
+    "name": "Fred K. Schott",
+    "company": "Google",
+    "twitter": "",
+    "gplus": "",
+    "photo": "/images/speakers/frederick_schott.jpg",
+    "bio": ""
   }
 ]
