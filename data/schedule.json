@@ -75,7 +75,7 @@
         "desc": "Introducing shared web components into disparate projects is a development dream, but when the build systems are different you spend more time creating helper scripts than writing shippable code. Using WebPack you can easily add Polymer components to any project and leverage a vast ecosystem of plugins to tame even the gnarliest of builds. As an added bonus your Polymer components can import content from node_modules without breaking a sweat."
       },
       {
-        "name": "Interop",
+        "name": "Custom Elements everywhere",
         "time": "Tuesday 5pm",
         "speaker": "Rob Dodson, Google",
         "desc": "If you're a mid to large size company, building your UI in Web Components and sharing it across teams on different stacks sounds like a great plan. In theory things should \"just work,\" but reality often proves otherwise. What do we need to do to make sure our components work well with all of the major frameworks and conversely what do the frameworks need to do to work with our components? This talk explores both sides of the problem and lays out some best practices that both parties can use to ensure seamless interoperability."
