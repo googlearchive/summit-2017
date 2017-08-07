@@ -169,6 +169,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     }
 
+    .twitter-embed-container {
+      max-width: 660px;
+    }
+
     a.button {
       display: block;
       margin: 4px;
@@ -259,7 +263,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </script>
   <polymer-summit>
     <!-- <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/VBbejeKHrjg?list=PLNYkxOF6rcICc687SxHQRuo9TVNOJelSZ" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/yTASiOaXlck" allowfullscreen></iframe>
     </div> -->
     <header>
       <div class="responsive-logo">
@@ -338,11 +342,17 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </div>
 
     <h2 class="fullbleed">Summit Extended.</h2>
+    <section class="pink">
+      <div class="social twitter-embed-container">
+        <!-- Twitter embed -->
+        <a class="twitter-timeline" data-height="700" data-partner="tweetdeck" href="https://twitter.com/polymer/timelines/893550891885670400">#PolymerSummit 2017 - Curated tweets by polymer</a>
+      </div>
+    </section>
     <section class="grey">
       <div class="row social">
         <div>
           <h3>Can’t make it this year?</h3>
-          <p>All sessions will be livestreamed and recorded. <a href="https://services.google.com/fb/forms/polymer2017/" target="_blank" rel="noopener" data-outbound>Sign up to receive updates.</a></p>
+          <p>All sessions will be livestreamed and recorded. <a href="https://www.youtube.com/watch?v=yTASiOaXlck" target="_blank" rel="noopener" data-outbound>View the live stream.</a></p>
         </div>
         <div>
           <div class="row">
@@ -370,6 +380,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             <a href="https://bitly.com/polymerslack" target="_blank" rel="noopener" data-outbound class="button pink">
               Join the conversation on the Polymer Slack channel
             </a>
+          </div>
         </div>
       </div>
     </section>
@@ -389,6 +400,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </a>
   </footer>
 
+  <!-- Twitter embed -->
+  <script src="https://platform.twitter.com/widgets.js" async></script>
 
   <!--
     Google Analytics code. Defines the global `ga` variable which will use throughout the app.
