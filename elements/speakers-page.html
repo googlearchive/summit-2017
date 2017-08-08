@@ -85,10 +85,9 @@
         // Use XHR instead of fetch for preload - see https://bugs.chromium.org/p/chromium/issues/detail?id=652228.
         const xhr = new XMLHttpRequest();
         xhr.addEventListener('load', () => {
-          this.data = xhr.response;
+          this.data = JSON.parse(xhr.response);
         });
         xhr.open('GET', '/data/speakers.json');
-        xhr.responseType = 'json';
         xhr.send();
       }
 

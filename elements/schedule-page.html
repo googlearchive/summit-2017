@@ -8,7 +8,8 @@
   <template>
     <style include="grid-view-shared-styles">
       .card.date-card {
-        background: #194b9c;
+        /* !important hack needed for webcomponents/shadycss#121 */
+        background: #194b9c !important;
         color: #fff;
       }
 
@@ -72,10 +73,9 @@
         // Use XHR instead of fetch for preload - see https://bugs.chromium.org/p/chromium/issues/detail?id=652228.
         const xhr = new XMLHttpRequest();
         xhr.addEventListener('load', () => {
-          this.data = xhr.response;
+          this.data = JSON.parse(xhr.response);
         });
         xhr.open('GET', '/data/schedule.json');
-        xhr.responseType = 'json';
         xhr.send();
       }
 

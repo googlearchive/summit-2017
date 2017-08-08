@@ -41,11 +41,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <meta name="theme-color" content="#2e9be6">
 
   <link rel="manifest" href="/manifest.json">
-  <link rel="import" href="/elements/polymer-summit.html" async>
 
-  <script src="/bower_components/webcomponentsjs/webcomponents-loader.js" async></script>
-
-  <style>
+  <custom-style>
+    <style>
     html {
       --header-height: 60px;
       --section-padding: 20px;
@@ -247,7 +245,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         flex: 1;
       }
     }
-  </style>
+    </style>
+  </custom-style>
 </head>
 
 <body>
@@ -400,8 +399,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </a>
   </footer>
 
-  <!-- Twitter embed -->
-  <script src="https://platform.twitter.com/widgets.js" async></script>
+  <!--
+    Web Components loader must run synchronously so that customElements.define is patched
+    before <polymer-summit> (which is in ES5) is defined.
+  -->
+  <script src="/bower_components/webcomponentsjs/webcomponents-loader.js"></script>
 
   <!--
     Google Analytics code. Defines the global `ga` variable which will use throughout the app.
@@ -409,12 +411,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     Subsequent pageviews and outbound link click events are sent by the <polymer-summit> element
     (which handles routing). We also include a noscript fallback so we can track users with no
     JS (thought it's not completely reliable since we can't generate a unique cid per user).
+
+    window.ga must be defined before <polymer-summit> (which relies on it).
   -->
   <script>
     window.ga = function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
     ga('create', 'UA-39334307-21', 'auto');
     ga('send', 'pageview');
   </script>
+
+  <link rel="import" href="/elements/polymer-summit.html">
+
+  <!-- Twitter embed -->
+  <script src="https://platform.twitter.com/widgets.js" async></script>
+
   <script src='https://www.google-analytics.com/analytics.js' async></script>
   <noscript>
     <img src="https://www.google-analytics.com/collect?v=1&amp;t=pageview&amp;tid=UA-39334307-21&amp;cid=42&amp;dh=summit.polymer-project.org&amp;dp=%2Fnoscript">

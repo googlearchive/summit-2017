@@ -12,10 +12,6 @@
     "sw-imported.js"
   ],
   "builds": [{
-    "bundle": true,
-    "js": {"minify": true},
-    "css": {"minify": true},
-    "html": {"minify": true},
-    "addServiceWorker": true
+    "preset": "es5-bundled"
   }]
 }
