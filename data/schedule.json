@@ -3,6 +3,19 @@
     "date": "Tuesday, August 22",
     "sessions": [
       {
+        "name": "Registration/Breakfast",
+        "time": "Tuesday 8-10am",
+        "desc": "Pick up your badge, goodies, and enjoy breakfast. You must have a government-issued photo ID to receive a badge and check in to the event. If you requested special meals due to dietary restrictions, please visit the help desk. The introductory codelab will also take place during this time.",
+        "type": "break"
+      },
+      {
+        "name": "Introductory Codelab",
+        "time": "Tuesday 9am",
+        "speaker": "Kate Jeffreys, Google",
+        "desc": "New to Polymer? Join us for an introductory codelab before the keynote.",
+        "type": "special"
+      },
+      {
         "name": "Welcome & Opening Keynote",
         "time": "Tuesday 10am",
         "speaker": "Wendy Ginsberg & Fred Schott, Google",
@@ -15,8 +28,10 @@
         "desc": "EA leverages Web Components and Polymer to power our portfolio-wide Network Design System. Learn about our transformation from building one-off pages and transient sites, to reusable components and engaging experiences."
       },
       {
-        "name": "Break",
-        "time": "Tuesday 11am"
+        "name": "Morning Break",
+        "time": "Tuesday 11am",
+        "desc": "Grab a snack and ask a question in the Ask Polymer lounge.",
+        "type": "break"
       },
       {
         "name": "Evolving the Next Generation of Polymer Elements",
@@ -32,7 +47,15 @@
       },
       {
         "name": "Lunch",
-        "time": "Tuesday 12:30pm"
+        "time": "Tuesday 12:30pm",
+        "desc": "If you requested special meals due to dietary restrictions, please visit the help desk. The lunchtime brown bag discussion will also take place during this time.",
+        "type": "break"
+      },
+      {
+        "name": "Lunchtime Brown Bag Discussion: Keynote Q&A",
+        "time": "Tuesday 12:45pm",
+        "desc": "Come chat with the Polymer team about the announcements from the keynote.",
+        "type": "special"
       },
       {
         "name": "Polymer @ YouTube",
@@ -59,14 +82,23 @@
         "desc": "Web Components provide new ways for teams to build cool things, but it can be a challenge to get all those cool things to play together nicely. How do you organize and document a coherent ecosystem of modules that truly work well together, and how do you build an effective team to build them? The USA TODAY NETWORK design-dev team will share some of their lessons-learned from the past year spent overhauling their web framework."
       },
       {
-        "name": "Break",
-        "time": "Tuesday 3:15pm"
+        "name": "Afternoon Break",
+        "time": "Tuesday 3:15pm",
+        "desc": "Grab a snack and ask a question in the Ask Polymer lounge, or join us for the afternoon codelab.",
+        "type": "break"
       },
       {
-        "name": "What you see is what you deserve: simple visual tools for all!",
+        "name": "Afternoon Codelab: Performant Expand & Collapse Animations",
+        "time": "Tuesday 3:30pm",
+        "speaker": "Valdrin Koshi, Google",
+        "desc": "In this codelab, you’ll learn how to implement performant expand/collapse animation for a dropdown menu by using scale transforms.",
+        "type": "special"
+      },
+      {
+        "name": "Custom Elements everywhere",
         "time": "Tuesday 4pm",
-        "speaker": "Monica Dinculescu, Google",
-        "desc": "Polymer is great for building libraries of Web Components everyone can use and for defining a unified design system, but there’s more we can do to help those who craft components showcase them and those who assemble them together into something unique get their work done fast and easy. Come hear about the latest visual tools I’ve been working on in the latest Meownica show!"
+        "speaker": "Rob Dodson, Google",
+        "desc": "If you're a mid to large size company, building your UI in Web Components and sharing it across teams on different stacks sounds like a great plan. In theory things should \"just work,\" but reality often proves otherwise. What do we need to do to make sure our components work well with all of the major frameworks and conversely what do the frameworks need to do to work with our components? This talk explores both sides of the problem and lays out some best practices that both parties can use to ensure seamless interoperability."
       },
       {
         "name": "Polymer + Webpack: Bringing Web Components to a Framework Near You",
@@ -75,20 +107,34 @@
         "desc": "Introducing shared web components into disparate projects is a development dream, but when the build systems are different you spend more time creating helper scripts than writing shippable code. Using WebPack you can easily add Polymer components to any project and leverage a vast ecosystem of plugins to tame even the gnarliest of builds. As an added bonus your Polymer components can import content from node_modules without breaking a sweat."
       },
       {
-        "name": "Custom Elements everywhere",
+        "name": "What you see is what you deserve: simple visual tools for all!",
         "time": "Tuesday 5pm",
-        "speaker": "Rob Dodson, Google",
-        "desc": "If you're a mid to large size company, building your UI in Web Components and sharing it across teams on different stacks sounds like a great plan. In theory things should \"just work,\" but reality often proves otherwise. What do we need to do to make sure our components work well with all of the major frameworks and conversely what do the frameworks need to do to work with our components? This talk explores both sides of the problem and lays out some best practices that both parties can use to ensure seamless interoperability."
+        "speaker": "Monica Dinculescu, Google",
+        "desc": "Polymer is great for building libraries of Web Components everyone can use and for defining a unified design system, but there’s more we can do to help those who craft components showcase them and those who assemble them together into something unique get their work done fast and easy. Come hear about the latest visual tools I’ve been working on in the latest Meownica show!"
       },
       {
         "name": "After Party",
-        "time": "Tuesday 6pm"
+        "time": "Tuesday 6pm",
+        "desc": "Grab dinner, a drink, and chat with other engineers!",
+        "type": "break"
       }
     ]
   },
   {
     "date": "Wednesday, August 23",
     "sessions": [
+      {
+        "name": "Registration/Breakfast",
+        "time": "Wednesday 8-10am",
+        "desc": "If you didn’t get your badge on Day 1, you can still get your badge and goodies. Breakfast will also be served. You must have a government-issued photo ID to receive a badge and check in to the event. If you requested special meals due to dietary restrictions, please visit the help desk.",
+        "type": "break"
+      },
+      {
+        "name": "Polymer Women’s Breakfast",
+        "time": "Wednesday 9-10am",
+        "desc": "Join the women of the Polymer team for a Polymer Women’s breakfast, featuring a panel discussion with Monica Dinculescu, Mariko Kosaka, and Wendy Ginsberg.",
+        "type": "special"
+      },
       {
         "name": "Day Two Opening Remarks",
         "time": "Wednesday 10am",
@@ -108,8 +154,10 @@
         "desc": "When we started the project that developed Web Components back in '11, the full impact of the mobile revolution hadn't yet been felt. Many tools and frameworks developed in the intervening years inherited desktop-centric assumptions that no longer make sense. What's needed now are approaches that let us build on-time and under budget -- both the development time and performance budget. Web Components were designed to help solve problems we understood from the desktop era, but mobile has pushed us to the limits of our ability and understanding. Do those problems still matter?"
       },
       {
-        "name": "Break",
-        "time": "Wednesday 11am"
+        "name": "Morning Break",
+        "time": "Wednesday 11am",
+        "desc": "Grab a snack and ask a question in the Ask Polymer lounge.",
+        "type": "break"
       },
       {
         "name": "What is/Who makes \"the Platform\"",
@@ -125,7 +173,16 @@
       },
       {
         "name": "Lunch",
-        "time": "Wednesday 12:30pm"
+        "time": "Wednesday 12:30pm",
+        "desc": "If you requested special meals due to dietary restrictions, please visit the help desk. The lunchtime codelab will also take place during this time.",
+        "type": "break"
+      },
+      {
+        "name": "Lunchtime Codelab: PRPL with Custom Elements and Firebase",
+        "time": "Wednesday 12:45pm",
+        "speaker": "Keanu Lee, Google",
+        "desc": "In this codelab, you’ll learn how to build a web app with Custom Elements that implements the PRPL pattern and deploy to Firebase Hosting.",
+        "type": "special"
       },
       {
         "name": "SEO, Social Snippets & SSR",
@@ -164,8 +221,10 @@
         "desc": "ES6 Modules are now supported in all major modern browsers. By using the platform and building native, well-supported, modular code, you can benefit from speedier engineering cycles—no compile steps required during development. Sam will detail architectural patterns that enable you to use ES6 Modules for your webapp or experience, regardless of framework—including shipping modern code to modern browsers (fast!) while still compiling down to an older baseline for the long tail."
       },
       {
-        "name": "Break",
-        "time": "Wednesday 3:30pm"
+        "name": "Afternoon Break",
+        "time": "Wednesday 3:30pm",
+        "desc": "Grab a snack and ask a question in the Ask Polymer lounge.",
+        "type": "break"
       },
       {
         "name": "⚡️Supercharged Live Live Live",

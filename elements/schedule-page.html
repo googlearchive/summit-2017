@@ -20,6 +20,14 @@
         line-height: 1.3em;
       }
 
+      .card[type=break] h3 {
+        color: #666;
+      }
+
+      .card[type=special] h3 {
+        color: var(--pink-theme-color);
+      }
+
       .meta {
         color: #555;
       }
@@ -39,7 +47,7 @@
 
           <dom-repeat items="[[item.sessions]]">
             <template>
-              <div class="card">
+              <div class="card" type$="[[item.type]]">
                 <collapsible-content>
                   <div class="summary">
                     <h3>[[item.name]]</h3>
