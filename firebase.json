@@ -11,6 +11,13 @@
         "destination": "/index.html"
       }
     ],
+    "redirects": [
+      {
+        "source" : "/codelabs",
+        "destination" : "https://codelabs.developers.google.com/polymer-summit-2017",
+        "type" : 301
+      }
+    ],
     "trailingSlash": false,
     "headers": [
       {
