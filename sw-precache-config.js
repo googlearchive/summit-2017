@@ -1,4 +1,9 @@
 module.exports = {
+  navigateFallbackWhitelist: [
+    /^\/$/,
+    /^\/schedule$/,
+    /^\/speakers$/
+  ],
   staticFileGlobs: [
     '/manifest.json',
     '/bower_components/webcomponentsjs/webcomponents-loader.js'
