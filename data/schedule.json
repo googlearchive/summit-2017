@@ -12,7 +12,7 @@
         "name": "Introductory Codelab",
         "time": "Tuesday 9am",
         "speaker": "Kate Jeffreys, Google",
-        "desc": "New to Polymer? Join us for an introductory codelab before the keynote.",
+        "desc": "In this codelab, you'll learn the basics of Polymer from end-to-end. You'll install all the tools you need, build a simple game as a web app, and deploy it to the web.",
         "type": "special"
       },
       {
@@ -185,10 +185,10 @@
         "type": "special"
       },
       {
-        "name": "SEO, Social Snippets & SSR",
+        "name": "Straight talk about server-side rendering",
         "time": "Wednesday 1:30pm",
         "speaker": "Gray Norton, Google",
-        "desc": "PWAs help us deliver excellent user experiences. But to reach users, our PWAs also need to cater to a non-human audience: the bots that crawl the web, populating search engines and producing snippets for social media sharing. This talk provides a 30,000-foot view of what it means to make your PWA search- and social-ready in the age of web components, setting the stage for Sam and Trey’s deep-dives."
+        "desc": "Server-side rendering is a hot topic, and for good reason – it’s instrumental in maximizing your app’s reach and can have performance benefits as well. You’ve asked to hear more about SSR in a web-components context, and we’ve heard you loud and clear: Polymer Summit 2017 features an hour of SSR-related content. This talk provides a 30,000-foot view and sets the stage for Sam and Trey’s deep-dives."
       },
       {
         "name": "Solving SEO with Headless Chrome",
