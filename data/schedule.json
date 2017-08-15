@@ -76,7 +76,7 @@
         "desc": "The classic monolithic CMS isn't keeping up with the modern web. Decoupled and the headless CMSes have emerged and are looking to address these issues - but what about componentized content? Can web components help us make a better content experience? This talk will look at the current state of content management, and how we can utilize web components. We'll look at creating a component to view and edit content, including design considerations, pitfalls, and what a future of content-based components could look like."
       },
       {
-        "name": "Design systems & component systems",
+        "name": "Designing a design system for modular modules, and building a team to build it",
         "time": "Tuesday 2:45pm",
         "speaker": "Jesiah McCann, Josh Trout, Marianne Epstein, Gannett",
         "desc": "Web Components provide new ways for teams to build cool things, but it can be a challenge to get all those cool things to play together nicely. How do you organize and document a coherent ecosystem of modules that truly work well together, and how do you build an effective team to build them? The USA TODAY NETWORK design-dev team will share some of their lessons-learned from the past year spent overhauling their web framework."
