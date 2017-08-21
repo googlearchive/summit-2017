@@ -263,14 +263,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     }
   </script>
   <polymer-summit>
-    <!-- Day 1 -->
+    <!--
+      NOTE(keanulee): Update URL for /video-embed redirect in firebase.json. This allows changing
+      the video without having to update this precached file (and getting the "Site updated" toast).
+    -->
     <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/yTASiOaXlck" title="Day 1 live stream" allowfullscreen></iframe>
+      <iframe src="/video-embed" title="Video" allowfullscreen></iframe>
     </div>
-    <!-- Day 2 -->
-    <!-- <div class="video-container">
-      <iframe src="https://www.youtube.com/embed/rY233a4tp2s" title="Day 2 live stream" allowfullscreen></iframe>
-    </div> -->
     <!-- <header>
       <div class="responsive-logo">
         <img src="/images/logos/p-logo.svg" class="logo" alt="Polymer Logo">
