@@ -21,12 +21,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         opacity: 0;
         transition-property: transform, opacity;
         transition-duration: 0.5s;
-        will-change: transform, opacity;
       }
 
       :host > ::slotted(.selected) {
         display: block;
-        transform: translate3d(0, 0, 0);
+        transform: none;
         opacity: 1;
       }
     </style>
