@@ -39,6 +39,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
 
       .meta {
+        margin: 0.5em 0;
         color: #555;
       }
 
@@ -64,7 +65,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     <h4>[[item.speaker]]</h4>
                     <div class="meta">[[item.time]]</div>
                     <div class="meta">[[item.location]]</div>
-                    <a href$="[[item.video]]" class="video">WATCH THE VIDEO</a>
+                    <a href$="[[item.video]]" target="_blank" rel="noopener" data-outbound class="video">
+                      WATCH THE VIDEO
+                    </a>
                     <svg class="toggle-icon" viewBox="0 0 24 24"><g><path d="M7 10l5 5 5-5z"></path></g></svg>
                   </div>
 
